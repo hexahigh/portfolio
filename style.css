@@ -51,7 +51,7 @@ p a:active {
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: 1em;
+    right: 10em;
   }
 
   .projectbutton:hover {
@@ -68,7 +68,7 @@ p a:active {
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: 2em;
+    right: 20em;
   }
 
   .contactbutton:hover {
@@ -85,7 +85,7 @@ p a:active {
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: 3em;
+    right: 30em;
   }
 
   .homebutton:hover {
