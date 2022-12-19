@@ -68,7 +68,7 @@ p a:active {
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: auto;
+    left: auto;
   }
 
   .contactbutton:hover {
