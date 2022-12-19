@@ -38,6 +38,130 @@ p a:active {
 .projectbutton {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
   }
+
+
+  * {
+    box-sizing: border-box;
+}
+.code-editor {
+    background-color: rgba(49, 52, 64, 1);
+    border-radius: 5px;
+    box-shadow: 0 10px 6px -6px #000;
+    border: 1px solid #1b1c22;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+    font-weight: bold;
+}
+.code-editor > .tabs {
+    background-color: transparent;
+}
+.code-editor > .tabs > .title {
+    width: 60%;
+    position: relative;
+    padding: 5px 0 7px 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+}
+.code-editor > .tabs > .title.-ruby {
+    color: #d16262;
+}
+.code-editor > .tabs > .title.-javascript {
+    color: #dbb984;
+}
+.code-editor > .tabs > .title.-html {
+    color: #e27b60;
+}
+.code-editor > .tabs > .title.-react {
+    color: #75e0fd;
+}
+.code-editor > .tabs > .title:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    content: '';
+    color: #6e7180;
+    width: 66.5%;
+    padding-top: 5px;
+    height: 100%;
+    background-color: rgba(38, 40, 49, 1);
+    border-bottom: 1px solid #1b1c22;
+    border-left: 1px solid #1b1c22;
+}
+.code-editor > .tabs > .title > .icon {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    color: inherit;
+    font-size: 1rem;
+}
+.code-editor > .content {
+    padding: 20px 0 20px 10px;
+    font-size: 1.05rem;
+}
+.code-editor > .content > .lines {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.code-editor .lines > .line ::selection {
+    background-color: rgba(62, 68, 81, 0.8);
+}
+.code-editor .lines > .line {
+    white-space: nowrap;
+}
+.code-editor .lines > .line > span {
+    white-space: normal;
+    word-wrap: break-word;
+}
+.code-editor .lines .linenumber {
+    color: #414556;
+    padding: 0 15px 0 0;
+    font-weight: normal;
+}
+.code-editor .red {
+    color: #e06c75;
+}
+.code-editor .purple {
+    color: #c678dd;
+}
+.code-editor .yellow {
+    color: #fecf5f;
+}
+.code-editor .orange {
+    color: #fb8578;
+}
+.code-editor .blue {
+    color: #7ebaff;
+}
+.code-editor .green {
+    color: #98c379;
+}
+.code-editor .light-blue {
+    color: #75e0fd;
+}
+.code-editor .comment {
+    color: #5c6370;
+    font-style: italic;
+}
+body {
+    width: 100%;
+    background-color: #192127;
+    padding-top: 100px;
+}
+body .code-editor {
+    width: 70%;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 480px) {
+    .code-editor > .tabs > .title {
+        width: 100%;
+        border-right: none;
+   }
+    .code-editor > .tabs > .title:after {
+        display: none;
+   }
+}
+
   
