@@ -51,7 +51,7 @@ p a:active {
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: auto;
+    right: 10%;
   }
 
   .projectbutton:hover {
@@ -68,10 +68,27 @@ p a:active {
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: auto;
+    right: 20%
   }
 
   .contactbutton:hover {
+    transform: scale(1.1);
+  }
+
+  .homebutton {
+    color: #ffffff;
+    font-family: 'Monstserrat', sans-serif;
+    background-color: #192127;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #192127;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 30%
+  }
+
+  .homebutton:hover {
     transform: scale(1.1);
   }
 
