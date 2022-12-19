@@ -42,13 +42,14 @@ p a:active {
   }
 
   .button {
+    background-color: #192127;
     display: inline-block;
     padding: 10px 20px;
-    border: 1px solid black;
+    border: 1px solid #192127;
     cursor: pointer;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 10%;
   }
 
   .button:hover {
