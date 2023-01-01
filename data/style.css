@@ -326,6 +326,7 @@ nav ul li a:hover {
 .contact-form label {
     text-transform: uppercase;
     font-size: 1rem;
+    color: #1470e9;
 }
 
 .contact-form input {
