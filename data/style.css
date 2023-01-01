@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.projectscompact {
+    line-height: 1em;
+}
+
 :root {
     --text-color: #ffffff;
     --nav-link-inactive: #1470e9;
