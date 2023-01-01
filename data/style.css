@@ -2,16 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root {
-    --text-color: #000;
+    --text-color: #ffffff;
     --nav-link-inactive: #361500;
-    --body-bg: #fff;
+    --body-bg: #192127;
     --nav-link-hover: #CC9544;
 }
 
 * {
-    font-family: 'Mukta', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin: 50px;
+    padding: 25px;
 }
 
 html {
@@ -74,9 +76,9 @@ nav ul li a:hover {
 
 #nav-donate,
 #nav-donate-mobile {
-    background: #62D2A2;
+    background: #1470e9;
     border: none;
-    color: #fff;
+    color: #ffffff;
     border-radius: 6px;
     font-size: 1.1rem;
     padding: .4rem 1.4rem;
@@ -92,7 +94,7 @@ nav ul li a:hover {
 #nav-donate-mobile:focus,
 .contact-form button[type="submit"]:hover,
 .contact-form button[type="submit"]:focus {
-    background: #1FAB89;
+    background: #10addd;
     cursor: pointer;
 }
 
