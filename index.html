@@ -1,44 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" Type="text/css" media="all">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Boofdev portfolio</title>
+    <link rel="shortcut icon" href="data/images/logoround.png">
+    <link rel="icon" type="image/x-icon" href="data/images/logoround.png">
+    <link rel="stylesheet" href="data/style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-  <div class="container-fluid">   
-    <h1>Hello there, and welcome to my portfolio!</h1>
-    <p>I enjoy coding and playing video games.</p>
-    <div>
-      <button onclick="window.location.href='/projects'" class="projectbutton">Projects</button>
-      <button onclick="window.location.href='mailto:admin@boof.eu.org'" class="contactbutton">Contact me</button>
-      <button onclick="window.location.href='/../../../../../../../../../../../../..'" class="homebutton">Home</button>
+
+    <a href="#index-intro-contact-btn" id="skip-nav">Skip Navigation</a>
+    
+    <nav>
+        <img src="data/images/logoround.png" alt="Boofev">
+        <p>Boofdev</p>
+        <ul id="nav-pc">
+            <li><a href="index.html" id="nav-active">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a target="_blank" href="https://patreon.com/boofdev" id="nav-donate">Donate</a></li>
+        </ul>
+        <ul id="nav-mobile">
+            <li id="nav-menu-li"><button id="nav-menu"><img src="data/images/menu.svg" alt="menu" id="nav-menu-img"></button></li>
+        </ul>
+    </nav>
+
+    <div class="nav-mobile-content-close">
+        <ul>
+            <li><a href="index.html" id="nav-active">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a target="_blank" href="https://patreon.com/boofdev" id="nav-donate-mobile">Donate</a></li>
+        </ul>
     </div>
-  </div> 
-    <body>
-        <h1>Skills:</h1>
-        <div class="code-editor">
-          <div class="tabs">
-            <div class="title -javascript"><i class="icon devicon-javascript-plain colored"></i>Skills.js</div>
-          </div>
-          <div class="content">
-            <ul class="lines">
-              <li class="line"><span class="linenumber">1</span>
-                <span class="comment">// Technology stuff im good at</span>
-              </li>
-              <li class="line"><span class="linenumber">2</span><span class="yellow">JavaScript</span></li>
-              <li class="line"><span class="linenumber">3</span><span class="red">Html</span></li>
-              <li class="line"><span class="linenumber">4</span><span class="blue">Css</span></li>
-              <li class="line"><span class="linenumber">5</span><span class="yellow">Python</span></li>
-              <li class="line"><span class="linenumber">6</span><span class="blue">Lua</span></li>
-            </ul>
-          </div>
+
+    <a href="#" class="scrollTop"><img src="data/images/top.svg" alt="Top"></a>
+
+    <div id="index-content">
+        <div class="index-intro">
+            <h1>Hi, I'm <span>Boof</span></h1>
+            <h2>Hobbyist Programmer</h2>
+            <h3>I have been making websites for more than 1 year and im trying to learn new things constantly.</h3>
+            <a href="#contact"><button id="index-intro-contact-btn">Contact</button></a>
         </div>
-      </body>
+        <div class="index-socials">
+            <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github"></a>
+        </div>
+    </div>
+
+    <div id="skills"></div>
+    <div class="skills">
+        <div class="skills-item">
+            <img src="data/images/html.png" alt="HTML">
+            <p>HTML</p>
+        </div>
+        <div class="skills-item">
+            <img src="data/images/css.png" alt="CSS">
+            <p>CSS</p>
+        </div>
+        <div class="skills-item">
+            <img src="data/images/lua.png" alt="Lua">
+            <p>Lua</p>
+        </div>
+        <div class="skills-item">
+            <img src="data/images/py.png" alt="Python">
+            <p>Python</p>
+        </div>
+    </div>
+
+    <div id="contact"></div>
+    <div class="contact">
+        <div class="contact-sidepanel">
+            <div class="contact-socials">
+                <p>Contact</p>
+                <span>Send me a message via email or contact me via socials</span>
+            </div> 
+            <br>
+            <div class="contact-socials">
+                <p>Socials</p>
+                <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github"></a>
+            </div>
+        </div>
+        <form class="contact-form" action="https://public.herotofu.com/v1/fed039b0-89d2-11ed-a003-6f0b76086b1c" method="post">
+            <label for="name">full name</label>
+            <input name="Name" id="name" type="text" required>
+            <label for="email">email</label>
+            <input name="Email" id="email" type="email" required>
+            <label for="subject">subject</label>
+            <input name="subject" id="subject" type="text">
+            <label for="message">message</label>
+            <textarea name="message" id="email" id="contact-form-message" rows="3" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-links-wrapper">
+            <div class="footer-links">
+                <p>Quick Links</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a target="_blank" href="https://patreon.com/boofdev">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <p>Social Links</p>
+                <ul>
+                    <li><a href="https://github.com/hexahigh">Github</a></li>
+                </ul>
+            </div>
+        </div>
+        <p><span class="current-year"></span> © Boofdev</p>
+    </footer>
+
 </body>
 </html>
