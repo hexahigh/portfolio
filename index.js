@@ -11,10 +11,10 @@ const navMenuImg = document.querySelector('#nav-menu-img');
 function navShow() {
     if (navMobileContentClose.classList.contains('nav-mobile-content')) {
         navMobileContentClose.classList.remove('nav-mobile-content');
-        navMenuImg.src = 'wp-content/images/menu.svg';
+        navMenuImg.src = 'data/images/menu.svg';
     } else {
         navMobileContentClose.classList.toggle('nav-mobile-content');
-        navMenuImg.src = 'wp-content/images/close.svg';
+        navMenuImg.src = 'data/images/close.svg';
     }
 }
 
