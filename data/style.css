@@ -3,9 +3,9 @@
 
 :root {
     --text-color: #ffffff;
-    --nav-link-inactive: #361500;
+    --nav-link-inactive: #1470e9;
     --body-bg: #192127;
-    --nav-link-hover: #CC9544;
+    --nav-link-hover: #10addd;
 }
 
 * {
@@ -344,7 +344,7 @@ nav ul li a:hover {
 }
 
 .contact-socials {
-    border: 1px solid #1C0A00;
+    border: 1px solid #1470e9;
     padding: 10px;
     min-width: 13rem;
     width: max-content;
@@ -447,7 +447,7 @@ footer > p {
 .skills-item {
     text-align: center;
     border-radius: 5px;
-    border: 1px solid #361500;
+    border: 1px solid #1470e9;
     padding: 1rem 0;
     width: 7.5rem;
     transition: 400ms;
