@@ -107,7 +107,7 @@ nav ul li a:hover {
     top: 0;
     left: .5rem;
     color: #fff;
-    background: #1FAB89;
+    background: #1470e9;
     font-weight: 300;
     padding: .3rem 1rem;
     transform: translateY(-120%);
@@ -222,11 +222,11 @@ nav ul li a:hover {
 }
 
 .index-intro h1 span {
-    color: #62D2A2;
+    color: #1470e9;
 }
 
 .index-intro h2 {
-    color: #361500;
+    color: #14a6e9;
     font-size: 1.3rem;
     margin-top: -7px;
     font-weight: 500;
@@ -264,12 +264,12 @@ nav ul li a:hover {
     padding: .5rem 2rem;
     cursor: pointer;
     letter-spacing: 1px;
-    background: #62D2A2;
+    background: #1470e9;
 }
 
 .index-intro a button:hover,
 .index-intro a button:focus {
-    background: #1FAB89;
+    background: #10addd;
 }
 
 .index-intro a button:focus {
@@ -366,7 +366,7 @@ nav ul li a:hover {
 }
 
 .contact-form button[type="submit"] {
-    background: #62D2A2;
+    background: #1470e9;
     border: none;
     width: calc(100% + 5px);
     font-size: 1.1rem;
@@ -394,7 +394,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background: #1FAB89;
+    background: #1470e9;
     color: #fff;
     padding: 1rem 5vw;
     margin-top: 5.5rem;
