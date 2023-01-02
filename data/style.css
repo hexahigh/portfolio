@@ -4,7 +4,9 @@
 .projectscompact {
     line-height: 1em;
 }
-
+.skillstext {
+    justify-content: center;
+}
 :root {
     --text-color: #ffffff;
     --nav-link-inactive: #1470e9;
