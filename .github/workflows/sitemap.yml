@@ -19,14 +19,14 @@ jobs:
       id: sitemapxml
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://boof.eu.org/
+        base-url-path: https://boofdev.eu.org/
         path-to-root: .
         
     - name: Generate the sitemap
       id: sitemaptxt
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://boof.eu.org/
+        base-url-path: https://boofdev.eu.org/
         path-to-root: .
         sitemap-format: txt
         additional-extensions: doc docx ppt pptx txt md exe lua py zip rar mp3 png wav jpg jpeg bin css js json php svg gif ogg swf ico otf ttf scss xml sh
