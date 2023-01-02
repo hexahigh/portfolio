@@ -7,6 +7,9 @@
 .skillstext {
     justify-content: center;
 }
+.text {
+    color:  var(--text-color)
+}
 :root {
     --text-color: #ffffff;
     --nav-link-inactive: #1470e9;
