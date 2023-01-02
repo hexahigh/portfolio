@@ -1,9 +1,11 @@
 https://boof.eu.org/
 https://boof.eu.org/index old.html
 https://boof.eu.org/index.js
+https://boof.eu.org/sitemap.txt
 https://boof.eu.org/sitemap.xml
 https://boof.eu.org/style old.css
 https://boof.eu.org/data/style.css
+https://boof.eu.org/projects/
 https://boof.eu.org/data/images/axorax.png
 https://boof.eu.org/data/images/close.svg
 https://boof.eu.org/data/images/css.png
