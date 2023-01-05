@@ -64,7 +64,7 @@ var config = {
   var messagesRef = firebase.database().ref('messages');
   
   // Listen for form submit
-  document.getElementById('contactForm').addEventListener('submit', submitForm);
+  document.getElementById('contact-form').addEventListener('submit', submitForm);
   
   // Submit form
   function submitForm(e){
