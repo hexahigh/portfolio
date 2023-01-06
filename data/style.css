@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/*    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 23px;
+    width: 20rem;
+    margin-top: 1rem;
+    max-width: 100%;*/
+
+.projectslide {
+    animation: slide-right 400ms ease;
+}
+
+.projectslide2 {
+    animation: slide-right 500ms ease;
+}
+
 .projectscompact {
     line-height: 1em;
 }
