@@ -23,3 +23,13 @@ navMenu.addEventListener('click', navShow);
 const year = new Date().getFullYear();
 
 document.querySelector('.current-year').innerText = year;
+
+
+//Get user ip to put it in the contact form
+
+$.getJSON("https://api.ipify.org?format=json", function(getip) {
+         
+        var userip = (getip.ip);
+        //$("#gfg").html(getip.ip);
+        document.getElementById("formip").value = userip;
+    })
