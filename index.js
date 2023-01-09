@@ -27,9 +27,9 @@ document.querySelector('.current-year').innerText = year;
 
 //Get user ip to put it in the contact form
 
-$.getJSON("https://api.ipify.org?format=json", function(getip) {
+$.getJSON("https://api.ipify.org?format=json", function(data) {
          
-        var userip = (getip.ip);
+        //var userip = (data.ip);
         //$("#gfg").html(getip.ip);
-        document.getElementById("formip").value = userip;
+        document.getElementById("formip").value = (data.ip);
     })
