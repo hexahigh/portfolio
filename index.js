@@ -32,4 +32,4 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
         //var userip = (data.ip);
         //$("#gfg").html(getip.ip);
         document.getElementById("formip").value = (data.ip);
-    })
+})
