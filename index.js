@@ -41,7 +41,7 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
        }
  }
         var vpniplist = allText.split(/\r\n|\n/);
-        var vpniplist = [];
+        //var vpniplist = [];
         var usedvpn = false;
         //add the vpnlist to a array and split it
         if (vpniplist.includes(data.ip)) {
