@@ -28,8 +28,25 @@ document.querySelector('.current-year').innerText = year;
 //Get user ip to put it in the contact form
 
 $.getJSON("https://api.ipify.org?format=json", function(data) {
-         
-        //var userip = (data.ip);
-        //$("#gfg").html(getip.ip);
+        //Load the vpnlist
+         var txtFile = new XMLHttpRequest();
+         txtFile.open("GET", "vpnip.txt", true);
+         txtFile.onreadystatechange = function() {
+       if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
+             if (txtFile.status === 200) {  // Makes sure it's found the file.
+             allText = txtFile.responseText;
+               lines = txtFile.responseText.split("\r\n"); // Will separate each line into an array
+         } //"\r\n" 
+       }
+ }
+        var vpniplist = [];
+        var usedvpn = false;
+        //add the vpnlist to a array and split it
+        vpniplist = allText.split(/\r\n|\n/);
+        if (vpniplist.includes(data.ip)) {
+            var usedvpn = true
+        }
+        //Put the values into the form
         document.getElementById("formip").value = (data.ip);
+        document.getElementById("usedvpn").value = usedvpn;
 })
