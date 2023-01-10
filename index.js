@@ -28,26 +28,25 @@ document.querySelector('.current-year').innerText = year;
 //Get user ip to put it in the contact form
 
 $.getJSON("https://api.ipify.org?format=json", function(data) {
-        //Load the vpnlist
-         var txtFile = new XMLHttpRequest();
-         var allText = "fuck you javascript"
-         txtFile.open("GET", "vpnip.txt", true);
-         txtFile.onreadystatechange = function() {
-       if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
-             if (txtFile.status === 200) {  // Makes sure it's found the file.
-             allText = txtFile.responseText;
-               var lines = txtFile.responseText.split("\r\n"); // Will separate each line into an array
-         } //"\r\n" 
-       }
- }
+ })
+var userip = (data.ip);
+ fetch('vpnip.txt')
+    .then(response => response.arrayBuffer())
+    .then(arrayBuffer => {
+        const decoder = new TextDecoder('utf-8');
+        const data = decoder.decode(new Uint8Array(arrayBuffer));
+        const array = data.split('\n');
+        console.log(array);
+    })
+    .catch(error => console.error(error));
+
         //var vpniplist = allText.split(/\r\n|\n/);
         //var vpniplist = [];
         var usedvpn = false;
         //add the vpnlist to a array and split it
-        if (lines.includes(data.ip)) {
-            var usedvpn = true
-        }
+            if (array.includes(userip)) {
+                var usedvpn = true
+            }
         //Put the values into the form
         document.getElementById("formip").value = (data.ip);
         document.getElementById("usedvpn").value = usedvpn;
-})
