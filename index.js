@@ -40,10 +40,10 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
         var usedvpn = false;
         if (array.includes(userip)) {
             var usedvpn = true
-            document.getElementById("usedvpn").value = usedvpn;
         } else {
             var usedvpn = false;
         }
+        document.getElementById("usedvpn").value = usedvpn;
     })
     .catch(error => console.error(error));
  })
