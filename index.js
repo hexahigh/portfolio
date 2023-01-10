@@ -30,8 +30,7 @@ document.querySelector('.current-year').innerText = year;
 $.getJSON("https://api.ipify.org?format=json", function(data) {
     var userip = (data.ip);
     document.getElementById("formip").value = (data.ip);
- })
- fetch('vpnip.txt')
+    fetch('vpnip.txt')
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
         const decoder = new TextDecoder('utf-8');
@@ -47,8 +46,4 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
         }
     })
     .catch(error => console.error(error));
-
-        //var vpniplist = allText.split(/\r\n|\n/);
-        //var vpniplist = [];
-
-        //add the vpnlist to a array and split it
+ })
