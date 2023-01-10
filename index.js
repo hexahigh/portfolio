@@ -28,8 +28,8 @@ document.querySelector('.current-year').innerText = year;
 //Get user ip to put it in the contact form
 
 $.getJSON("https://api.ipify.org?format=json", function(data) {
+    var userip = (data.ip);
  })
-var userip = (data.ip);
  fetch('vpnip.txt')
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
