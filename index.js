@@ -30,6 +30,7 @@ document.querySelector('.current-year').innerText = year;
 $.getJSON("https://api.ipify.org?format=json", function(data) {
         //Load the vpnlist
          var txtFile = new XMLHttpRequest();
+         var allText = "fuck you javascript"
          txtFile.open("GET", "vpnip.txt", true);
          txtFile.onreadystatechange = function() {
        if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
