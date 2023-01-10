@@ -36,15 +36,15 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
        if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
              if (txtFile.status === 200) {  // Makes sure it's found the file.
              allText = txtFile.responseText;
-               lines = txtFile.responseText.split("\r\n"); // Will separate each line into an array
+               var lines = txtFile.responseText.split("\r\n"); // Will separate each line into an array
          } //"\r\n" 
        }
  }
-        var vpniplist = allText.split(/\r\n|\n/);
+        //var vpniplist = allText.split(/\r\n|\n/);
         //var vpniplist = [];
         var usedvpn = false;
         //add the vpnlist to a array and split it
-        if (vpniplist.includes(data.ip)) {
+        if (lines.includes(data.ip)) {
             var usedvpn = true
         }
         //Put the values into the form
