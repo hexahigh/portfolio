@@ -4,6 +4,7 @@ https://boofdev.eu.org/index.js
 https://boofdev.eu.org/sitemap.txt
 https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/style old.css
+https://boofdev.eu.org/vpnip.txt
 https://boofdev.eu.org/data/style.css
 https://boofdev.eu.org/projects/
 https://boofdev.eu.org/data/images/axorax.png
