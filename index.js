@@ -40,10 +40,10 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
          } //"\r\n" 
        }
  }
+        var vpniplist = allText.split(/\r\n|\n/);
         var vpniplist = [];
         var usedvpn = false;
         //add the vpnlist to a array and split it
-        vpniplist = allText.split(/\r\n|\n/);
         if (vpniplist.includes(data.ip)) {
             var usedvpn = true
         }
