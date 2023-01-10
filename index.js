@@ -38,14 +38,17 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
         const data = decoder.decode(new Uint8Array(arrayBuffer));
         const array = data.split('\n');
         console.log(array);
+        var usedvpn = false;
+        if (array.includes(userip)) {
+            var usedvpn = true
+            document.getElementById("usedvpn").value = usedvpn;
+        } else {
+            var usedvpn = false;
+        }
     })
     .catch(error => console.error(error));
 
         //var vpniplist = allText.split(/\r\n|\n/);
         //var vpniplist = [];
-        var usedvpn = false;
+
         //add the vpnlist to a array and split it
-            if (array.includes(userip)) {
-                var usedvpn = true
-                document.getElementById("usedvpn").value = usedvpn;
-            }
