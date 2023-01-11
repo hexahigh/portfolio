@@ -27,10 +27,7 @@ document.querySelector('.current-year').innerText = year;
 
 //Get user ip to put it in the contact form
 //Also check if they are using a vpn
-//$.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip", function(data) {
-getIPs().then(data=>{
-    console.log(getIPs)
-    console.log(data.join)
+$.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip", function(data) {
     var userip = (data.ip);
     document.getElementById("formip").value = (data.ip);
     fetch('vpnip.txt')
