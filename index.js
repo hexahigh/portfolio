@@ -29,7 +29,7 @@ document.querySelector('.current-year').innerText = year;
 //Also check if they are using a vpn
 //$.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip", function(data) {
 getIPs().then(data=>{
-    console.log(data.ip)
+    console.log(getIPs)
     console.log(data.join)
     var userip = (data.ip);
     document.getElementById("formip").value = (data.ip);
