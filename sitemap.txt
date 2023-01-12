@@ -7,7 +7,6 @@ https://boofdev.eu.org/style old.css
 https://boofdev.eu.org/vpnip.txt
 https://boofdev.eu.org/data/style.css
 https://boofdev.eu.org/projects/
-https://boofdev.eu.org/data/images/axorax.png
 https://boofdev.eu.org/data/images/close.svg
 https://boofdev.eu.org/data/images/css.png
 https://boofdev.eu.org/data/images/github.svg
