@@ -291,12 +291,12 @@ nav ul li a:hover {
 }
 
 .index-socials > a,.contact-socials > a {
-    opacity: .4;
+    opacity: 60%;
     margin-right: 15px;
 }
 
 .index-socials > a:hover,.contact-socials > a:hover {
-    opacity: .6;
+    opacity: 80%;
 }
 
 .index-socials > a > img{
