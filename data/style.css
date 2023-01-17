@@ -185,7 +185,7 @@ nav ul li a:hover {
     display: block!important;
     animation: nav-open 600ms;
     position: fixed;
-    background: #fff;
+    background: #192127;
     width: 100%;
     z-index: 999999;
 }
