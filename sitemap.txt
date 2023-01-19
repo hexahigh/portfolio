@@ -1,6 +1,7 @@
 https://boofdev.eu.org/
 https://boofdev.eu.org/index old.html
 https://boofdev.eu.org/index.js
+https://boofdev.eu.org/privacy.html
 https://boofdev.eu.org/sitemap.txt
 https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/style old.css
