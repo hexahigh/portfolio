@@ -5,7 +5,6 @@ https://boofdev.eu.org/sitemap.txt
 https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/style old.css
 https://boofdev.eu.org/vpnip.txt
-https://boofdev.eu.org/data/style.css
 https://boofdev.eu.org/projects/
 https://boofdev.eu.org/data/images/close.svg
 https://boofdev.eu.org/data/images/css.png
@@ -20,3 +19,5 @@ https://boofdev.eu.org/data/images/py.png
 https://boofdev.eu.org/data/images/replit.svg
 https://boofdev.eu.org/data/images/top.svg
 https://boofdev.eu.org/data/images/youtube.svg
+https://boofdev.eu.org/data/style/offline-theme-dark.css
+https://boofdev.eu.org/data/style/style.css
