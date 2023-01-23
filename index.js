@@ -50,7 +50,7 @@ $.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/g
  })
 
 window.onload = function blockform() {
-    fetch('https://hexahigh.github.io/cdn/text/blockedformip.txt')
+    fetch('https://hexahigh.github.io/cdn/Text/blockedformip.txt')
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
         const decoder = new TextDecoder('utf-8');
