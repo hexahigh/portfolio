@@ -59,7 +59,12 @@ window.onload = function blockform() {
         //console.log(array);
         var isblocked = false;
         if (array.includes(userip)) {
-            
+            submitbutton = document.getElementById("submitbutton")
+            submitbutton.setAttribute('type', 'button');
+            submitbutton.innerText = "Your ip is blocked";
+            isblocked = true
+        } else {
+            isblocked = false
         }
     })
 }
