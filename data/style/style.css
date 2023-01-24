@@ -5,6 +5,10 @@
     color: #1470e9;
 }
 
+.colorurl:visited {
+    color: #1470e9;
+  }
+
 .colorurl:hover {
     color: #10addd;
 }
