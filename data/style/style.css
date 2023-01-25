@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.projectimg {
+    height: auto;
+    width: auto;
+}
+
 .colorurl:link {
     color: #1470e9;
 }
