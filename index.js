@@ -36,6 +36,8 @@ window.onload = function blockform() {
             submitbutton = document.getElementById("submitbutton")
             submitbutton.setAttribute('type', 'button');
             submitbutton.innerText = "Your ip is blocked";
+            formid = document.getElementById("formid")
+            formid.setAttribute('action', 'blocked');
             isblocked = true
         } else {
             isblocked = false
