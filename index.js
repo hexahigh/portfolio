@@ -44,3 +44,33 @@ window.onload = function blockform() {
         }
     })
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('#formid')
+    const addButton = document.querySelector('#submitbutton')
+    //const updateButton = document.querySelector('#updateAddress')
+  
+    addButton && addButton.addEventListener('click', (e) => {
+      e.preventDefault()
+  
+      if (!form.checkValidity()) {
+        return
+      }
+  
+      fetch('https://22242122.sibforms.com/serve/MUIEAHVHFKo30-l0E7GWm__Ik0lHwyITHmXyb-UlUlgD1PqMJAHk5jlFRp9cZ3HXLy2ZJNBL3ytPvMl5Mp8JrTbMgZnZqYYW4OXIzkk8QoL0OJIgUUdmiv98dF8bBDJGTDYsQormUfVvOCCkPusdemllOZytuSWnKnqdv1t16bJtsXQh3lYAIIWUXj7xdZixAMlS3mAIGgLaVCLr', { method: 'POST', body: new FormData(form) })
+        .then((r => r.json()))
+        .then(console.log)
+    })
+    
+    /*updateButton && updateButton.addEventListener('click', (e) => {
+      e.preventDefault()
+  
+      if (!form.checkValidity()) {
+        return
+      }
+  
+      fetch('/updateAddress', { method: 'POST', body: new FormData(form) })
+        .then((r => r.json()))
+        .then(console.log)
+    })*/
+  })
