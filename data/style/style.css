@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.emailformbutton {
+    background: #1470e9;
+    border: none;
+    width: calc(100% + 5px);
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 200;
+    height: 3rem;
+}
+
 .projectimg {
     height: 15em;
     width: auto;

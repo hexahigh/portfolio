@@ -1,4 +1,4 @@
-const formbutton = document.getElementById("submitbutton");
+const formbutton = document.getElementById("emailformbutton");
 const emailformoverlay = document.getElementById("email-form-overlay");
 const emailformpopup = document.getElementById("email-form-popup");
 
