@@ -1,3 +1,19 @@
+const formbutton = document.getElementById("submitbutton");
+const emailformoverlay = document.getElementById("email-form-overlay");
+const emailformpopup = document.getElementById("email-form-popup");
+
+formbutton.addEventListener("click", function () {
+  emailformoverlay.style.display = "block";
+  emailformpopup.style.display = "block";
+});
+
+emailformoverlay.addEventListener("click", function () {
+  emailformoverlay.style.display = "none";
+  emailformpopup.style.display = "none";
+});
+
+//send email form
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#formid')
     const addButton = document.querySelector('#submitbutton')
@@ -15,16 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(console.log)
         console.log("I know there is an error, just ignore it.")
     })
-    
-    /*updateButton && updateButton.addEventListener('click', (e) => {
-      e.preventDefault()
-  
-      if (!form.checkValidity()) {
-        return
-      }
-  
-      fetch('/updateAddress', { method: 'POST', body: new FormData(form) })
-        .then((r => r.json()))
-        .then(console.log)
-    })*/
-  })
+  })*/
