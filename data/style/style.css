@@ -11,6 +11,11 @@
     height: 3rem;
 }
 
+.emailformbutton:hover {
+    background: #10addd;
+    cursor: pointer;
+}
+
 .projectimg {
     height: 15em;
     width: auto;
