@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((r => r.json()))
         .then(console.log)
         console.log("I know there is an error, just ignore it.")
+        fetch('https://public.herotofu.com/v1/fed039b0-89d2-11ed-a003-6f0b76086b1c', { method: 'POST', body: new FormData(form) })
+        .then((r => r.json()))
+        .then(console.log)
     })
     
     /*updateButton && updateButton.addEventListener('click', (e) => {
