@@ -36,9 +36,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-  }
+}
 
-  #email-form-popup {
+#email-form-popup {
     display: none;
     position: fixed;
     top: 50%;
@@ -48,12 +48,12 @@
     height: 90vh;
     background-color: white;
     z-index: 1;
-  }
+}
 
-  #email-popup-iframe {
+#email-popup-iframe {
     width: 100%;
     height: 100%;
-  }
+}
 
 :root {
     --text-color: #ffffff;
