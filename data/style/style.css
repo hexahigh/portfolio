@@ -9,7 +9,7 @@
     color: #fff;
     font-weight: 200;
     height: 3rem;
-    border-top-width: 0.5em;
+    padding-top: 0.5em;
 }
 
 .emailformbutton:hover {
