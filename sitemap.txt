@@ -10,6 +10,7 @@ https://boofdev.eu.org/about/
 https://boofdev.eu.org/projects/
 https://boofdev.eu.org/data/images/close.svg
 https://boofdev.eu.org/data/images/css.png
+https://boofdev.eu.org/data/images/due_pic.svg.png
 https://boofdev.eu.org/data/images/github.svg
 https://boofdev.eu.org/data/images/havocado.png
 https://boofdev.eu.org/data/images/html.png
