@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+    font-family: Broadway;
+    src: url(/data/style/fonts/broadway.ttf);
+}
 
 .emailformbutton {
     background: #1470e9;
