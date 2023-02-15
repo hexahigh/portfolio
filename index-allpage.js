@@ -31,23 +31,3 @@ navMenu.addEventListener('click', navShow);
 const year = new Date().getFullYear();
 
 document.querySelector('.current-year').innerText = year;
-
-
-window.onload = async function removemailchimpthing() {
-    while (true) {
-        await delay(100);
-        const iframes = document.getElementsByTagName("iframe");
-        for (let i = 0; i < iframes.length; i++) {
-            const iframe = iframes[i];
-            try {
-                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                const mailchimpcredits = iframeDoc.getElementsByClassName("poweredWrapper");
-                if (mailchimpcredits.length > 0) {
-                    mailchimpcredits[0].remove();
-                }
-            } catch (e) {
-                console.error("Error accessing iframe content:", e);
-            }
-        }
-    }
-};
