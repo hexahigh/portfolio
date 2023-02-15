@@ -1,3 +1,11 @@
+// Set delay to ms
+function delay(milliseconds){
+    return new Promise(resolve => {
+      setTimeout(resolve, milliseconds);
+    });
+  }
+  
+
 function scrollTop() {
     const scrollBtn = document.querySelector('.scrollTop');
     if(this.scrollY >= 90) scrollBtn.classList.add('scrollTop-show'); else scrollBtn.classList.remove('scrollTop-show');
@@ -23,3 +31,12 @@ navMenu.addEventListener('click', navShow);
 const year = new Date().getFullYear();
 
 document.querySelector('.current-year').innerText = year;
+
+
+window.onload = async function removemailchimpthing() {
+    while (true) {
+        await delay(100)
+        const mailchimpcredits = document.getElementsByClassName("poweredWrapper");
+        mailchimpcredits.remove()
+    }
+}
