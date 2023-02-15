@@ -37,6 +37,8 @@ window.onload = async function removemailchimpthing() {
     while (true) {
         await delay(100)
         const mailchimpcredits = document.getElementsByClassName("poweredWrapper");
-        mailchimpcredits.remove()
+        if (mailchimpcredits.length > 0) {
+            mailchimpcredits[0].remove();
+        }
     }
 }
