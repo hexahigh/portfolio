@@ -35,10 +35,10 @@ document.querySelector('.current-year').innerText = year;
 
 window.onload = async function removemailchimpthing() {
     while (true) {
-        await delay(100)
+        await delay(100);
         const mailchimpcredits = document.getElementsByClassName("poweredWrapper");
         if (mailchimpcredits.length > 0) {
             mailchimpcredits[0].remove();
         }
     }
-}
+};
