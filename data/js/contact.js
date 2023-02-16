@@ -5,6 +5,15 @@ const emailformpopup = document.getElementById("email-form-popup");
 formbutton.addEventListener("click", function () {
   emailformoverlay.style.display = "block";
   emailformpopup.style.display = "block";
+  // Show our element, then call our callback
+  $("#email-form-popup").show(function(){
+    // Find the iframes within our newly-visible element
+    $(this).find("iframe").prop("src", function(){
+      // Set their src attribute to the value of data-src
+      return $(this).data("src");
+    });
+  });
+
 });
 
 emailformoverlay.addEventListener("click", function () {
