@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://boofdev.eu.org/sitemap.xml
+Sitemap: https://boofdev.eu.org/sitemap.txt
