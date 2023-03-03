@@ -3,6 +3,7 @@ https://boofdev.eu.org/404.html
 https://boofdev.eu.org/index-allpage.js
 https://boofdev.eu.org/index.js
 https://boofdev.eu.org/privacy.html
+https://boofdev.eu.org/robots.txt
 https://boofdev.eu.org/sitemap.txt
 https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/vpnip.txt
