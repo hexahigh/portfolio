@@ -8,10 +8,9 @@
 .noscriptwrapper {
     position: absolute;
     z-index: 100;
-    align-self: center;
-    width: 100%;
+    width: 50%;
     top: 0;
-    right: 50%;
+    /*right: 50%;*/
     background: #1470e9;
     color: #fff;
     padding-top: 0.5rem;
