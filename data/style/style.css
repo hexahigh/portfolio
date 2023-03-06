@@ -116,6 +116,7 @@ html {
 
 body {
     background-color: var(--body-bg);
+    overflow-x: hidden;
 }
 
 a {
