@@ -6,6 +6,7 @@
 }
 
 .noscriptwrapper {
+    overflow-x: hidden;
     position: absolute;
     z-index: 100;
     width: 100%;
