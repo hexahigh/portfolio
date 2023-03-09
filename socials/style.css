@@ -11,6 +11,7 @@
     top: 50%;
     left: 50%;
     margin: -110px 0 0 -100px;
+    box-sizing: content-box;
 }
 
 .flex-child {
@@ -21,7 +22,6 @@
     user-select: none;
     text-align: center;
     border-radius: 5px;
-    border: 1px solid #414143ed;
     padding: 1rem 0;
     width: 7.5rem;
     transition: 400ms;
