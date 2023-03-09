@@ -35,6 +35,8 @@ https://boofdev.eu.org/data/style/offline-language-english.css
 https://boofdev.eu.org/data/style/offline-theme-dark.css
 https://boofdev.eu.org/data/style/style old.css
 https://boofdev.eu.org/data/style/style.css
+https://boofdev.eu.org/socials/assets/github.svg
 https://boofdev.eu.org/socials/assets/logoround.png
+https://boofdev.eu.org/socials/assets/youtube.svg
 https://boofdev.eu.org/data/style/fonts/broadway regular.ttf
 https://boofdev.eu.org/data/style/fonts/broadway.ttf
