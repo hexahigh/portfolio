@@ -1,14 +1,13 @@
 .flex-parent {
     margin: 0 5px;
     margin-top: 5rem;
-    display: flex;
+    display: block;
     flex-direction: row;
     justify-content: center;
     gap: 2.2rem;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
 }
 
 .flex-child {
