@@ -58,7 +58,7 @@
         "direction": "none",
         "random": false,
         "straight": false,
-        "out_mode": "out",
+        "out_mode": "bounce",
         "bounce": true,
         "attract": {
           "enable": false,
