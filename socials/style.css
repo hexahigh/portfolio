@@ -6,8 +6,9 @@
     justify-content: center;
     gap: 2.2rem;
     flex-wrap: wrap;
-    margin: auto;
-    width: 50%;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .flex-child {
