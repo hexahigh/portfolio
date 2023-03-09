@@ -1,0 +1,25 @@
+.flex-parent {
+    margin: 0 5px;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50%;
+}
+
+.flex-child {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #1470e9;
+    padding: 1rem 0;
+    width: 7.5rem;
+    transition: 400ms;
+}
