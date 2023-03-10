@@ -9,6 +9,7 @@ https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/vpnip.txt
 https://boofdev.eu.org/about/
 https://boofdev.eu.org/projects/
+https://boofdev.eu.org/data/images/Kopimizm.svg
 https://boofdev.eu.org/data/images/close.svg
 https://boofdev.eu.org/data/images/css.png
 https://boofdev.eu.org/data/images/due_pic.svg.png
