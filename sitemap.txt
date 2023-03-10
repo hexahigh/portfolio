@@ -22,6 +22,7 @@ https://boofdev.eu.org/data/images/logo.jpg
 https://boofdev.eu.org/data/images/logoround.png
 https://boofdev.eu.org/data/images/lua.png
 https://boofdev.eu.org/data/images/menu.svg
+https://boofdev.eu.org/data/images/new-kopi.svg
 https://boofdev.eu.org/data/images/py.png
 https://boofdev.eu.org/data/images/replit.svg
 https://boofdev.eu.org/data/images/top.svg
