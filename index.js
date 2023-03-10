@@ -1,7 +1,7 @@
 var userip = 0
 
 //Get user ip to put it in the contact form
-//Also check if they are using a vpn
+//Also check if they are using a vpn (Deprecated)
 $.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip", function(data) {
     userip = (data.ip);
     document.getElementById("formip").value = (data.ip);
@@ -11,7 +11,6 @@ $.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/g
         const decoder = new TextDecoder('utf-8');
         const data = decoder.decode(new Uint8Array(arrayBuffer));
         const array = data.split('\n');
-        //console.log(array);
         var usedvpn = false;
         if (array.includes(userip)) {
             var usedvpn = true
@@ -22,7 +21,9 @@ $.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/g
     })
     .catch(error => console.error(error));
  })
-
+//Block the contact form if the ip is blocked.
+// (Way too easy to bypass)
+var isblocked = false
 window.onload = function blockform() {
     fetch('https://hexahigh.github.io/cdn/Text/blockedformip.txt')
     .then(response => response.arrayBuffer())
@@ -31,7 +32,6 @@ window.onload = function blockform() {
         const data = decoder.decode(new Uint8Array(arrayBuffer));
         const array = data.split('\n');
         //console.log(array);
-        var isblocked = false;
         if (array.includes(userip)) {
             submitbutton = document.getElementById("submitbutton")
             submitbutton.setAttribute('type', 'button');
