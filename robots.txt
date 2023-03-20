@@ -5,3 +5,5 @@ Sitemap: https://boofdev.eu.org/sitemap.xml
 Sitemap: https://boofdev.eu.org/sitemap.txt
 Sitemap: /sitemap.xml
 Sitemap: /sitemap.txt
+Sitemap: sitemap.xml
+Sitemap: sitemap.txt
