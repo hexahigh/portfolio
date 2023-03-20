@@ -13,7 +13,8 @@ https://boofdev.eu.org/data/images/Kopimizm.svg
 https://boofdev.eu.org/data/images/close.svg
 https://boofdev.eu.org/data/images/css.png
 https://boofdev.eu.org/data/images/due_pic.svg.png
-https://boofdev.eu.org/data/images/email-icon.svg
+https://boofdev.eu.org/data/images/email-black.svg
+https://boofdev.eu.org/data/images/email-white.svg
 https://boofdev.eu.org/data/images/github.svg
 https://boofdev.eu.org/data/images/havocado.png
 https://boofdev.eu.org/data/images/html.png
