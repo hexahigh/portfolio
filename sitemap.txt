@@ -33,6 +33,8 @@ https://boofdev.eu.org/data/style/offline-language-english.css
 https://boofdev.eu.org/data/style/offline-theme-dark.css
 https://boofdev.eu.org/data/style/style old.css
 https://boofdev.eu.org/data/style/style.css
+https://boofdev.eu.org/data/text/dsa-public-key.txt
+https://boofdev.eu.org/data/text/rsa-public-key.txt
 https://boofdev.eu.org/data/other pages/archive/email-form.html
 https://boofdev.eu.org/data/style/fonts/broadway regular.ttf
 https://boofdev.eu.org/data/style/fonts/broadway.ttf
