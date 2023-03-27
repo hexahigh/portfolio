@@ -10,6 +10,7 @@ https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/vpnip.txt
 https://boofdev.eu.org/about/
 https://boofdev.eu.org/projects/
+https://boofdev.eu.org/data/audio/yoshi.ogg
 https://boofdev.eu.org/data/images/Kopimizm.svg
 https://boofdev.eu.org/data/images/close.svg
 https://boofdev.eu.org/data/images/css.png
@@ -29,8 +30,11 @@ https://boofdev.eu.org/data/images/new-kopi.svg
 https://boofdev.eu.org/data/images/py.png
 https://boofdev.eu.org/data/images/replit.svg
 https://boofdev.eu.org/data/images/top.svg
+https://boofdev.eu.org/data/images/yoshi-new.png
 https://boofdev.eu.org/data/images/youtube.svg
+https://boofdev.eu.org/data/js/404.js
 https://boofdev.eu.org/data/js/contact.js
+https://boofdev.eu.org/data/style/404.css
 https://boofdev.eu.org/data/style/offline-language-english.css
 https://boofdev.eu.org/data/style/offline-theme-dark.css
 https://boofdev.eu.org/data/style/style old.css
