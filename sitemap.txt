@@ -1,5 +1,6 @@
 https://boofdev.eu.org/
 https://boofdev.eu.org/404.html
+https://boofdev.eu.org/devcontainer.json
 https://boofdev.eu.org/index-allpage.js
 https://boofdev.eu.org/index.js
 https://boofdev.eu.org/privacy.html
