@@ -9,6 +9,7 @@ https://boofdev.eu.org/sitemap.txt
 https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/vpnip.txt
 https://boofdev.eu.org/about/
+https://boofdev.eu.org/news/
 https://boofdev.eu.org/projects/
 https://boofdev.eu.org/data/audio/yoshi.ogg
 https://boofdev.eu.org/data/images/Kopimizm.svg
@@ -45,6 +46,7 @@ https://boofdev.eu.org/data/other pages/archive/404-old.html
 https://boofdev.eu.org/data/other pages/archive/email-form.html
 https://boofdev.eu.org/data/style/fonts/broadway regular.ttf
 https://boofdev.eu.org/data/style/fonts/broadway.ttf
+https://boofdev.eu.org/data/text/news/services.txt
 https://boofdev.eu.org/data/other pages/archive/socials/
 https://boofdev.eu.org/data/other pages/archive/socials/particles.js
 https://boofdev.eu.org/data/other pages/archive/socials/particles.json
