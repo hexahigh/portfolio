@@ -42,7 +42,7 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider()
 const analytics = getAnalytics(app);
 
-signInWithRedirect(auth, provider);
+
 
 
 /*function signUp() {
