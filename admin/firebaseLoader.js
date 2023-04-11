@@ -1,9 +1,10 @@
 // Import the functions you need from the SDKs you need
 
-/*
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -36,13 +37,15 @@ const firebaseConfig = {
 
 
 // Initialize Firebase
-
+const auth = getAuth();
 const app = initializeApp(firebaseConfig);
-
+const provider = new GoogleAuthProvider()
 const analytics = getAnalytics(app);
 
+signInWithRedirect(auth, provider);
 
-function signUp() {
+
+/*function signUp() {
     let email = document.getElementById("emailInput").value;
     let password = document.getElementById("passInput").value;
     const auth = getAuth();
@@ -57,4 +60,4 @@ function signUp() {
             const errorMessage = error.message;
             // ..
         });
-}
+}*/
