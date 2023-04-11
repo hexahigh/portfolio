@@ -35,9 +35,9 @@ const firebaseConfig = {
 
 };
 
-function googleSign() {
+document.getElementById("googleSignButton").addEventListener("click", function() {
     signInWithRedirect(auth, provider);
-}
+  });
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
