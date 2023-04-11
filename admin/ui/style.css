@@ -7,3 +7,7 @@
 .mainWrapper {
     align-items: center;
 }
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
