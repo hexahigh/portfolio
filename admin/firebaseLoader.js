@@ -34,11 +34,18 @@ const firebaseConfig = {
     measurementId: "G-NEV2YGJVJ7"
 
 };
-
-document.getElementById("googleSignButton").addEventListener("click", function() {
+// Check if google sign up button is pressed
+document.getElementById("googleSignButton").addEventListener("click", function () {
     signInWithRedirect(auth, provider);
-  });
+});
 
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        // User is signed in.
+    } else {
+        // No user is signed in.
+    }
+});
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -66,8 +73,7 @@ getRedirectResult(auth)
         // ...
     });
 
-
-/*function signUp() {
+document.getElementById("signUpButton").addEventListener("click", function () {
     let email = document.getElementById("emailInput").value;
     let password = document.getElementById("passInput").value;
     const auth = getAuth();
@@ -82,4 +88,4 @@ getRedirectResult(auth)
             const errorMessage = error.message;
             // ..
         });
-}*/
+});
