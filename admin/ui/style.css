@@ -1,11 +1,12 @@
 .header {
     border-bottom: 1px solid #111;
-    padding: 1.5rem 5vw;
+    padding: 0.1rem 1vw;
     display: block;
 }
 
 .mainWrapper {
-    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
 }
 
 .roboto {

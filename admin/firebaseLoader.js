@@ -37,22 +37,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+export const auth = getAuth(app);
 const provider = new GoogleAuthProvider()
 const analytics = getAnalytics(app);
 
-// Check if google sign up button is pressed
-document.getElementById("googleSignButton").addEventListener("click", function () {
-    signInWithRedirect(auth, provider);
-});
-
-auth().onAuthStateChanged(function (user) {
-    if (user) {
-        // User is signed in.
-    } else {
-        // No user is signed in.
-    }
-});
 
 
 getRedirectResult(auth)
