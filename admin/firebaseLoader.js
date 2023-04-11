@@ -35,6 +35,9 @@ const firebaseConfig = {
 
 };
 
+function googleSign() {
+    signInWithRedirect(auth, provider);
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
