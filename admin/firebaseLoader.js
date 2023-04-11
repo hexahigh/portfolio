@@ -34,23 +34,26 @@ const firebaseConfig = {
     measurementId: "G-NEV2YGJVJ7"
 
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider()
+const analytics = getAnalytics(app);
+
 // Check if google sign up button is pressed
 document.getElementById("googleSignButton").addEventListener("click", function () {
     signInWithRedirect(auth, provider);
 });
 
-firebase.auth().onAuthStateChanged(function (user) {
+auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
     } else {
         // No user is signed in.
     }
 });
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider()
-const analytics = getAnalytics(app);
+
 
 getRedirectResult(auth)
     .then((result) => {
