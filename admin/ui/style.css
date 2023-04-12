@@ -2,7 +2,9 @@
     border-bottom: 1px solid #111;
     padding: 0.1rem 1vw;
     display: flex;
-    align-items: end;
+    align-items: center;
+    gap: 3vw;
+    margin-left: 7vw;
 }
 
 .mainWrapper {
