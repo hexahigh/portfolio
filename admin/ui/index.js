@@ -64,22 +64,6 @@ getRedirectResult(auth)
         // ...
     });
 
-document.getElementById("signUpButton").addEventListener("click", function () {
-    let email = document.getElementById("emailInput").value;
-    let password = document.getElementById("passInput").value;
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-        });
-});
 
 document.getElementById("signOutButton").addEventListener("click", function () {
     const auth = getAuth();
