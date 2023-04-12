@@ -10,7 +10,6 @@ https://boofdev.eu.org/sitemap.xml
 https://boofdev.eu.org/vpnip.txt
 https://boofdev.eu.org/about/
 https://boofdev.eu.org/admin/
-https://boofdev.eu.org/admin/firebaseLoader.js
 https://boofdev.eu.org/admin/index.js
 https://boofdev.eu.org/admin/style.css
 https://boofdev.eu.org/news/
