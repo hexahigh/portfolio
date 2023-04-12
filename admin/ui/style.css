@@ -1,7 +1,8 @@
 .header {
     border-bottom: 1px solid #111;
     padding: 0.1rem 1vw;
-    display: block;
+    display: flex;
+    align-items: end;
 }
 
 .mainWrapper {
