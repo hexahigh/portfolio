@@ -88,7 +88,7 @@ document.getElementById("googleSignButton").addEventListener("click", function (
 
 
 
-auth().onAuthStateChanged(function (user) {
+auth.onAuthStateChanged(function (user) {
     if (user) {
         window.location.href="ui/index.html";
     } else {
