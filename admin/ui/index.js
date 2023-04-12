@@ -2,7 +2,7 @@
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
 
 
@@ -79,4 +79,24 @@ document.getElementById("signUpButton").addEventListener("click", function () {
             const errorMessage = error.message;
             // ..
         });
+});
+
+document.getElementById("signOutButton").addEventListener("click", function () {
+    const auth = getAuth();
+    signOut(auth).then(() => {
+        // Sign-out successful.
+    }).catch((error) => {
+        // An error happened.
+    });
+
+});
+
+// redirect user to login if not logged in
+auth.onAuthStateChanged(function (user) {
+    if (user) {
+        // signed in
+    } else {
+        // No user is signed in.
+        window.location.href="..";
+    }
 });
