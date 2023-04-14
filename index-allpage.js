@@ -20,14 +20,14 @@ const navMenuImg = document.querySelector('#nav-menu-img');
 function navShow() {
     if (navMobileContentClose.classList.contains('nav-mobile-content')) {
         navMobileContentClose.classList.remove('nav-mobile-content');
-        if(CurrentPage == projects, about, news) {
+        if(CurrentPage == "projects", "about", "news") {
             navMenuImg.src = '../data/images/menu.svg';
         } else {
             navMenuImg.src = '/data/images/menu.svg';
         }
     } else {
         navMobileContentClose.classList.toggle('nav-mobile-content');
-        if(CurrentPage == projects, about, news) {
+        if(CurrentPage == "projects", "about", "news") {
             navMenuImg.src = '../data/images/close.svg';
         } else {
             navMenuImg.src = '/data/images/close.svg';
