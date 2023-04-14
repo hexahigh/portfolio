@@ -24,6 +24,7 @@ function navShow() {
             navMenuImg.src = '../data/images/menu.svg';
         } else {
             navMenuImg.src = '/data/images/menu.svg';
+            console.log("you are on the homepage")
         }
     } else {
         navMobileContentClose.classList.toggle('nav-mobile-content');
@@ -31,6 +32,7 @@ function navShow() {
             navMenuImg.src = '../data/images/close.svg';
         } else {
             navMenuImg.src = '/data/images/close.svg';
+            console.log("you are on the homepage")
         }
     }
 }
