@@ -23,7 +23,7 @@ function navShow() {
         if(CurrentPage == "projects", "about", "news") {
             navMenuImg.src = '../data/images/menu.svg';
         } else {
-            navMenuImg.src = '/data/images/menu.svg';
+            navMenuImg.src = 'data/images/menu.svg';
             console.log("you are on the homepage")
         }
     } else {
@@ -31,7 +31,7 @@ function navShow() {
         if(CurrentPage == "projects", "about", "news") {
             navMenuImg.src = '../data/images/close.svg';
         } else {
-            navMenuImg.src = '/data/images/close.svg';
+            navMenuImg.src = 'data/images/close.svg';
             console.log("you are on the homepage")
         }
     }
