@@ -48,16 +48,6 @@ https://boofdev.eu.org/data/style/style old.css
 https://boofdev.eu.org/data/style/style.css
 https://boofdev.eu.org/data/text/dsa-public-key.txt
 https://boofdev.eu.org/data/text/rsa-public-key.txt
-https://boofdev.eu.org/data/other pages/archive/404-old.html
-https://boofdev.eu.org/data/other pages/archive/email-form.html
 https://boofdev.eu.org/data/style/fonts/broadway regular.ttf
 https://boofdev.eu.org/data/style/fonts/broadway.ttf
 https://boofdev.eu.org/data/text/news/services.txt
-https://boofdev.eu.org/data/other pages/archive/socials/
-https://boofdev.eu.org/data/other pages/archive/socials/particles.js
-https://boofdev.eu.org/data/other pages/archive/socials/particles.json
-https://boofdev.eu.org/data/other pages/archive/socials/style.css
-https://boofdev.eu.org/data/other pages/archive/socials/tmp.css
-https://boofdev.eu.org/data/other pages/archive/socials/assets/github.svg
-https://boofdev.eu.org/data/other pages/archive/socials/assets/logoround.png
-https://boofdev.eu.org/data/other pages/archive/socials/assets/youtube.svg
