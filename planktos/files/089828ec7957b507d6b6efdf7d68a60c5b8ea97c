@@ -1,0 +1,45 @@
+name: Generate xml sitemap
+
+on:
+  push:
+    branches: [ main, v2 ]
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 
+
+    - name: Generate the sitemap
+      id: sitemapxml
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://boofdev.eu.org/
+        path-to-root: .
+        
+    - name: Generate the sitemap
+      id: sitemaptxt
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://boofdev.eu.org/
+        path-to-root: .
+        sitemap-format: txt
+        additional-extensions: doc docx ppt pptx txt md exe lua py zip rar mp3 png wav jpg jpeg bin css js json php svg gif ogg swf ico otf ttf scss xml sh
+
+
+    - name: Output stats
+      run: |
+        echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+        echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+        echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+        
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Github Action: Automatic sitemap update."
+        branch: v2

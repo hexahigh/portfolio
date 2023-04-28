@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="/data/style/404.css">
+        <link rel="stylesheet" href="/data/style/style.css">
+        <script src="/data/js/404.js"></script>    
+        <title>Boofdev - 404</title>
+    </head>
+    <body onload="getAudio()" onclick="playYoshi()">
+        <div style="text-align: center; margin-top: 2rem;">
+            <h1 class="whiteT">404</h1>
+            <h3 class="whiteT">Page not found</h3>
+            <h3 class="whiteT">Return to the <a class="colorurl" href="https://boofdev.eu.org">Homepage</a></h3>
+            <br>
+            <img src="/data/images/yoshi-new.png" width="200em" class="bigYoshi">
+            <audio src="/data/audio/yoshi.ogg" loop="true" autoplay="true" id="yoshiSound"></audio>
+        </div>
+    </body>
+</html>
