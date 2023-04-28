@@ -3,6 +3,7 @@ https://boofdev.eu.org/404.html
 https://boofdev.eu.org/devcontainer.json
 https://boofdev.eu.org/index-allpage.js
 https://boofdev.eu.org/index.js
+https://boofdev.eu.org/planktos.sw.js
 https://boofdev.eu.org/privacy.html
 https://boofdev.eu.org/robots.txt
 https://boofdev.eu.org/sitemap.txt
@@ -13,6 +14,9 @@ https://boofdev.eu.org/admin/
 https://boofdev.eu.org/admin/index.js
 https://boofdev.eu.org/admin/style.css
 https://boofdev.eu.org/news/
+https://boofdev.eu.org/planktos/install.js
+https://boofdev.eu.org/planktos/manifest.json
+https://boofdev.eu.org/planktos/planktos.min.js
 https://boofdev.eu.org/projects/
 https://boofdev.eu.org/admin/ui/
 https://boofdev.eu.org/admin/ui/index.js
