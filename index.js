@@ -31,15 +31,8 @@ window.onload = function blockform() {
         const decoder = new TextDecoder('utf-8');
         const data = decoder.decode(new Uint8Array(arrayBuffer));
         const array = data.split('\n');
-        //console.log(array);
         if (array.includes(userip)) {
-            /*submitbutton = document.getElementById("submitbutton")
-            submitbutton.setAttribute('type', 'button');
-            submitbutton.innerText = "Your ip is blocked";
-            formid = document.getElementById("formid")
-            formid.setAttribute('action', 'blocked');*/
-            form = document.getElementById("formid")
-            form.remove()
+            document.getElementById("formid").remove()
             isblocked = true
         } else {
             isblocked = false
