@@ -13,6 +13,7 @@ https://boofdev.eu.org/admin/
 https://boofdev.eu.org/admin/index.js
 https://boofdev.eu.org/admin/style.css
 https://boofdev.eu.org/news/
+https://boofdev.eu.org/old-news/
 https://boofdev.eu.org/projects/
 https://boofdev.eu.org/admin/ui/
 https://boofdev.eu.org/admin/ui/index.js
