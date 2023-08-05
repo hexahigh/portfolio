@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Here is a list of the services that i host as of 1th of April 2023.
+
+10 domains, 5 of them are in use while the other domains are not used.
+A syncthing relay. You can find the statistics at relays.syncthing.net.
+A private VPN.
+2 private file servers.
+-----BEGIN PGP SIGNATURE-----
+
+iHUEAREIAB0WIQRxBSoj1zK2wl2QifATu3IFxs2CQwUCZCfrSgAKCRATu3IFxs2C
+Q1U+AP9wLsGSJ1wIqlFQ6dvWXZFcF1QoY+h7ECkYzq3m9qX1nQD/eHWs8b91gKJ3
+2jwUXPiJ7fVKYZFjbMN3FFwAzTDSkb8=
+=8PP7
+-----END PGP SIGNATURE-----
