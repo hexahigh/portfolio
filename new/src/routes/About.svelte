@@ -1,7 +1,6 @@
 <script>
-	import Footer from './Footer.svelte';
-	import Nav from './Nav.svelte';
-    import { Link, Route } from 'svelte-routing';
+	import Footer from '../Footer.svelte';
+	import Nav from '../Nav.svelte';
 	export let name;
 </script>
 

@@ -1,15 +1,9 @@
-<script>
-    import { Link, Route } from 'svelte-routing';
-    import About from './About.svelte';
-</script>
-
 <nav>
     <img src="data/images/logoround.png" alt="Boofdev logo">
     <p class="text" style="font-family: Broadway-custom;">Boofdev</p>
     <ul id="nav-pc">
         <li><a href="index.html" id="nav-active">Home</a></li>
         <li><a class="colorurl" href="about">About me</a></li>
-        <li><Link to="/about">About</Link></li>
         <li><a href="news/">News</a></li>
         <li><a href="projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -31,8 +25,3 @@
         <li><a target="_blank" href="https://patreon.com/boofdev" id="nav-donate-mobile">Donate</a></li>
     </ul>
 </div>
-
-
-<Route path="/about" let:params>
-    <About {params} />
-  </Route>
