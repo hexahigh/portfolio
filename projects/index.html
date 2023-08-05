@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../data/style/offline-language-english.css">
     <script src="https://hexahigh.github.io/cdn/js/min/offline.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/data/js/donate-choose.js" defer></script>
     <meta name="CurrentPage" content="projects">
 </head>
 
@@ -30,7 +31,7 @@
             <li><a href="../news/">News</a></li>
             <li><a href="../projects" id="nav-active">Projects</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
-            <li><a target="_blank" href="https://patreon.com/boofdev" id="nav-donate">Donate</a></li>
+            <li><a target="_blank" id="nav-donate">Donate</a></li>
         </ul>
         <ul id="nav-mobile">
             <li id="nav-menu-li"><button id="nav-menu"><img src="../data/images/menu.svg" alt="menu"
@@ -69,6 +70,22 @@
                         alt="Havocado banner"></a>
                 <h4 class="text">A project for the game Havocado.<br>
                     The goal is to be able to add custom maps and skins.</h4>
+            </div>
+            <!-- Donation popup -->
+            <div id="donate-choose-overlay"></div>
+            <div id="donate-choose-popup">
+                <h2 style="margin-top: 25px; text-align: center;" class="text">Choose a donation method</h3>
+                    <div
+                        style="display: flex; text-align: center; float: left; width: 50%; height: 100%; align-items: center; justify-content: center;">
+                        <img onclick="window.location.href='https://patreon.com/boofdev'"
+                            class="donate-choose-button-image" src="/data/images/patreon-vector-logo-2023.svg"
+                            width="50%">
+                    </div>
+                    <div
+                        style="display: flex; text-align: center; float: right; width: 50%; height: 100%; align-items: center; justify-content: center;">
+                        <img onclick="window.location.href='https://www.paypal.com/donate/?hosted_button_id=N2US62KK87SB4'"" class="
+                            donate-choose-button-image" src="/data/images/PayPal.svg" width="50%">
+                    </div>
             </div>
 
         </div>
