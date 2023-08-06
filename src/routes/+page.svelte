@@ -92,10 +92,6 @@
             <img src="data/images/gopher.svg" alt="Golang">
             <p class="text">Go</p>
         </div>
-        <div class="skills-item">
-            <img src="data/images/py.png" alt="Python">
-            <p class="text">Python</p>
-        </div>
     </div>
     <!-- Donation popup -->
     <div id="donate-choose-overlay"></div>
