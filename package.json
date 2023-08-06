@@ -4,7 +4,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"postbuild": "npx svelte-sitemap --domain https://boofdev.eu.org"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
@@ -14,6 +15,7 @@
 		"@sveltejs/kit": "^1.0.0-next.587",
 		"svelte": "^3.54.0",
 		"svelte-meta-tags": "^2.8.0",
+		"svelte-sitemap": "^2.6.0",
 		"vite": "^4.0.0"
 	},
 	"type": "module",
