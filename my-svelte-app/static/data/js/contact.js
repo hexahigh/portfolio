@@ -1,6 +1,6 @@
-const formbutton = document.getElementById("emailformbutton");
-const emailformoverlay = document.getElementById("email-form-overlay");
-const emailformpopup = document.getElementById("email-form-popup");
+var formbutton = document.getElementById("emailformbutton");
+var emailformoverlay = document.getElementById("email-form-overlay");
+var emailformpopup = document.getElementById("email-form-popup");
 
 formbutton.addEventListener("click", function () {
   emailformoverlay.style.display = "block";

@@ -1,6 +1,6 @@
-const donatebutton = document.getElementById("nav-donate");
-const donatechooseoverlay = document.getElementById("donate-choose-overlay");
-const donatechoosepopup = document.getElementById("donate-choose-popup");
+var donatebutton = document.getElementById("nav-donate");
+var donatechooseoverlay = document.getElementById("donate-choose-overlay");
+var donatechoosepopup = document.getElementById("donate-choose-popup");
 
 donatebutton.addEventListener("click", function () {
   donatechooseoverlay.style.display = "block";
