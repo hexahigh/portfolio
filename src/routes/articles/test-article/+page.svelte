@@ -28,7 +28,7 @@
 
 <main>
     <div>
-        <a class="back-button" href="/news">⬅Back</a>
+        <a class="back-button" href="/articles">⬅Back</a>
     </div>
     <div id="article-main">
         <h1>Lorem ipsum</h1>

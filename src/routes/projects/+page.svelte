@@ -1,7 +1,23 @@
 <script>
     import Nav from "../Nav.svelte";
     import Footer from "../Footer.svelte";
+    import { MetaTags } from "svelte-meta-tags";
 </script>
+
+<MetaTags
+ title="Boofdev - Projects"
+ description="Here you can find some of the projects im working on."
+ openGraph={{
+     url: 'https://boofdev.eu.org/projects',
+     title: 'Boofdev - Projects',
+     description: 'Here you can find some of the projects im working on.',
+     images: [
+         {
+             url: 'https://boofdev.eu.org/data/images/logoround.png',
+         }
+     ]
+ }}
+ />
 
 <svelte:head>
     <meta charset="UTF-8" />
@@ -39,31 +55,17 @@
             <br />
             <div class="projectscompact">
                 <h3>
-                    <a class="colorurl" href="https://boof.eu.org">Main site:</a
+                    <a class="colorurl" href="https://boof.eu.org">Main site</a
                     >
                 </h3>
-                <br />
-                <h4 class="text">
-                    On this site i have games, tools and software.<br />
-                    Some of which i have made, but most of them arent.
+                <h4 class="text" style="max-width: 30%;">
+                    This is basically just a place where i put random prototypes and other things i have made when i have been bored. It also contains a few games.
                 </h4>
             </div>
             <div class="projectscompact">
-                <h3>
-                    <a class="colorurl" href="https://discord.gg/eRCNMuTnpn"
-                        >Havocado Reborn</a
-                    >
-                </h3>
-                <a href="https://discord.gg/eRCNMuTnpn"
-                    ><img
-                        class="projectimg"
-                        src="../data/images/havocado.png"
-                        alt="Havocado banner"
-                    /></a
-                >
-                <h4 class="text">
-                    A project for the game Havocado.<br />
-                    The goal is to be able to add custom maps and skins.
+                <h3><a class="colorurl" href="https://gitte.080609.xyz">Gitte</a></h3>   
+                <h4 class="text" style="max-width: 30%;">
+                    My selfhosted gitea instance. It is run on a raspberry pi 4 which at the moment has no cooling. So i cannot guarentee 100% uptime.
                 </h4>
             </div>
         </div>

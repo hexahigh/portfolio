@@ -1,7 +1,23 @@
 <script>
     import Nav from '../Nav.svelte';
     import Footer from '../Footer.svelte';
+    import { MetaTags } from 'svelte-meta-tags';
 </script>
+
+<MetaTags
+ title="Boofdev - Articles"
+ description="On this page i will post articles and news"
+ openGraph={{
+     url: 'https://boofdev.eu.org/articles',
+     title: 'Boofdev - Articles',
+     description: 'On this page i will post articles and news',
+     images: [
+         {
+             url: 'https://boofdev.eu.org/data/images/logoround.png',
+         }
+     ]
+ }}
+ />
 
 <svelte:head>
     <meta name="HandheldFriendly" content="True">
@@ -58,17 +74,15 @@
 
     <div id="index-content">
         <div class="text" style="text-align: center;">
-            <h1 class="text" style="text-align: center; color: #1470e9;">News</h1>
+            <h1 class="text" style="text-align: center; color: #1470e9;">Articles</h1>
             <br>
-            <p class="text">Here you can find site-updates and other news.</p>
-            <p>All of the text files are cryptographically signed using my private key in order to prove that these news
-                come from me.</p>
-            <p>You can find the public keys used for verifying and decrypting the text files in the about-me page.</p>
+            <p class="text">On this page i will post articles and news.</p>
         </div>
         <br><br>
+        <!-- List of articles -->
         <div class="text" style="margin-left: 75px;">
-            <h2>Pinned:</h2>
-            <p><a class="colorurl" href="../data/text/news/services.txt">Services i host</a></p>
+            <h2>2023:</h2>
+            <p><a class="colorurl" href="/articles/test-article">Test article - 6/08/2023</a></p>
         </div>
         <!-- Donation popup -->
         <div id="donate-choose-overlay"></div>

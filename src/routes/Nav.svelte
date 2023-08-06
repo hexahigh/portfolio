@@ -13,9 +13,9 @@
     <p class="text" style="font-family: Broadway-custom;">Boofdev</p>
     <ul id="nav-pc">
         <li><a href="/" id:nav-active={$page.url.pathname === '/'}>Home</a></li>
-        <li><a class="colorurl" href="about" id:nav-active={$page.url.pathname === '/about'}>About me</a></li>
-        <li><a href="news/" id:nav-active={$page.url.pathname === '/news'}>News</a></li>
-        <li><a href="projects" id:nav-active={$page.url.pathname === '/projects'}>Projects</a></li>
+        <li><a class="colorurl" href="/about" id:nav-active={$page.url.pathname === '/about'}>About me</a></li>
+        <li><a href="/articles/" id:nav-active={$page.url.pathname === '/articles'}>Articles</a></li>
+        <li><a href="/projects" id:nav-active={$page.url.pathname === '/projects'}>Projects</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li><a target="_blank" id="nav-donate">Donate</a></li>
     </ul>
@@ -35,9 +35,9 @@
 <div class="nav-mobile-content-close">
     <ul>
         <li><a href="/" id:nav-active={$page.url.pathname === '/'}>Home</a></li>
-        <li><a href="about" id:nav-active={$page.url.pathname === '/about'}>About me</a></li>
-        <li><a href="news/" id:nav-active={$page.url.pathname === '/news'}>News</a></li>
-        <li><a href="projects" id:nav-active={$page.url.pathname === '/projects'}>Projects</a></li>
+        <li><a href="/about" id:nav-active={$page.url.pathname === '/about'}>About me</a></li>
+        <li><a href="/articles/" id:nav-active={$page.url.pathname === '/articles'}>Articles</a></li>
+        <li><a href="/projects" id:nav-active={$page.url.pathname === '/projects'}>Projects</a></li>
         <li><a href="#contact" id:nav-active={$page.url.pathname === '/'}>Contact</a></li>
         <li>
             <a

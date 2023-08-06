@@ -5,10 +5,10 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About me</a></li>
-                <li><a href="/news">News</a></li>
+                <li><a href="/articles">Articles</a></li>
                 <li><a href="/#contact">Contact</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
                 <li><a target="_blank" href="https://patreon.com/boofdev">Donate</a></li>
             </ul>
         </div>
