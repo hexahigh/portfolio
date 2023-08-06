@@ -22,6 +22,6 @@
         </div>
         <img src="/data/images/new-kopi.svg" width="75em" style="top: 50%;" alt="Copy Me">
     </div>
-    <p>Made with svelte❤️</p>
+    <p>Made with svelte<img src="/data/images/Svelte_Logo.svg" alt="Svelte logo" style="height: 19px;"></p>
     <p><span class="current-year">2023</span> - Boofdev</p>
 </footer>

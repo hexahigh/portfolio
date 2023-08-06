@@ -1,7 +1,23 @@
 <script>
     import Nav from "../../Nav.svelte";
     import Footer from "../../Footer.svelte";
+    import { MetaTags } from 'svelte-meta-tags';
 </script>
+
+<MetaTags
+ title="Boofdev - Test article"
+ description="Lorem ipsum"
+ openGraph={{
+     url: 'https://boofdev.eu.org/news/test-article',
+     title: 'Boofdev - Test article',
+     description: 'Lorem ipsum',
+     images: [
+         {
+             url: 'https://boofdev.eu.org/data/images/articles/test-article/1637846620838.jpg',
+         }
+     ]
+ }}
+ />
 
 <svelte:head>
     <link rel="stylesheet" href="/data/style/style.css" />
