@@ -20,7 +20,7 @@
                 <li><a href="https://www.youtube.com/@Boofydev">Youtube</a></li>
             </ul>
         </div>
-        <img src="data/images/new-kopi.svg" width="75em" style="top: 50%;" alt="Copy Me">
+        <img src="/data/images/new-kopi.svg" width="75em" style="top: 50%;" alt="Copy Me">
     </div>
     <p>Made with svelte❤️</p>
     <p><span class="current-year">2023</span> - Boofdev</p>

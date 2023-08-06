@@ -9,7 +9,7 @@
 </style>
 
 <nav>
-    <img src="data/images/logoround.png" alt="Boofdev logo" />
+    <img src="/data/images/logoround.png" alt="Boofdev logo" />
     <p class="text" style="font-family: Broadway-custom;">Boofdev</p>
     <ul id="nav-pc">
         <li><a href="/" id:nav-active={$page.url.pathname === '/'}>Home</a></li>
@@ -23,7 +23,7 @@
         <li id="nav-menu-li">
             <button id="nav-menu"
                 ><img
-                    src="data/images/menu.svg"
+                    src="/data/images/menu.svg"
                     alt="menu"
                     id="nav-menu-img"
                 /></button
