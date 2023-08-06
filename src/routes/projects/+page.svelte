@@ -82,17 +82,20 @@
                     onclick="window.location.href='https://patreon.com/boofdev'"
                     class="donate-choose-button-image"
                     src="/data/images/patreon-vector-logo-2023.svg"
+                    alt="Patreon"
                     width="50%"
                 />
             </div>
             <div
                 style="display: flex; text-align: center; float: right; width: 50%; height: 100%; align-items: center; justify-content: center;"
             >
+                <!-- svelte-ignore a11y-missing-attribute -->
                 <img
                     onclick="window.location.href='https://www.paypal.com/donate/?hosted_button_id=N2US62KK87SB4'"
                     class="
                         donate-choose-button-image"
                     src="/data/images/PayPal.svg"
+                    alt="PayPal"
                     width="50%"
                 />
             </div>
