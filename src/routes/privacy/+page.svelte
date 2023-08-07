@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/data/style/style.css">
 </svelte:head>
 
-<main>
+<main style="text-align: center; color: #ffffff;">
     <h1>Privacy Policy for boofdev.eu.org</h1>
     <br />
     <p>By using this site you agree to this privacy policy</p>
