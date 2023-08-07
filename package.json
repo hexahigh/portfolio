@@ -4,8 +4,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview",
-		"postbuild": "npx svelte-sitemap --domain https://boofdev.eu.org --out-dir .svelte-kit/cloudflare"
+		"preview": "vite preview"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
