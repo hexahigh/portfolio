@@ -8,12 +8,12 @@
  title="Boofdev - Articles"
  description="On this page i will post articles and news"
  openGraph={{
-     url: 'https://boofdev.eu.org/articles',
+     url: 'https://boofdev.eu/articles',
      title: 'Boofdev - Articles',
      description: 'On this page i will post articles and news',
      images: [
          {
-             url: 'https://boofdev.eu.org/data/images/logoround.png',
+             url: 'https://boofdev.eu/data/images/logoround.png',
          }
      ]
  }}
@@ -29,10 +29,10 @@
     <meta property="og:type" content="Portfolio">
     <meta property="og:title" content="Boofdev portfolio">
     <meta name="twitter:title" content="Boofdev portfolio">
-    <meta property="og:url" content="https://boofdev.eu.org">
-    <meta name="twitter:url" content="https://boofdev.eu.org">
-    <meta property="og:image" content="https://boofdev.eu.org/data/images/logoround.png">
-    <meta name="twitter:image" content="https://boofdev.eu.org/data/images/logoround.png">
+    <meta property="og:url" content="https://boofdev.eu">
+    <meta name="twitter:url" content="https://boofdev.eu">
+    <meta property="og:image" content="https://boofdev.eu/data/images/logoround.png">
+    <meta name="twitter:image" content="https://boofdev.eu/data/images/logoround.png">
     <meta name="description" content="This is my portfolio.">
     <meta name="twitter:description" content="This is my portfolio.">
     <meta property="og:image:width" content="1920">

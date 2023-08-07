@@ -8,12 +8,12 @@
  title="Boofdev - Projects"
  description="Here you can find some of the projects im working on."
  openGraph={{
-     url: 'https://boofdev.eu.org/projects',
+     url: 'https://boofdev.eu/projects',
      title: 'Boofdev - Projects',
      description: 'Here you can find some of the projects im working on.',
      images: [
          {
-             url: 'https://boofdev.eu.org/data/images/logoround.png',
+             url: 'https://boofdev.eu/data/images/logoround.png',
          }
      ]
  }}

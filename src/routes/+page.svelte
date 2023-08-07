@@ -14,10 +14,10 @@
     <meta property="og:type" content="Portfolio">
     <meta property="og:title" content="Boofdev portfolio">
     <meta name="twitter:title" content="Boofdev portfolio">
-    <meta property="og:url" content="https://boofdev.eu.org">
-    <meta name="twitter:url" content="https://boofdev.eu.org">
-    <meta property="og:image" content="https://boofdev.eu.org/data/images/logoround.png">
-    <meta name="twitter:image" content="https://boofdev.eu.org/data/images/logoround.png">
+    <meta property="og:url" content="https://boofdev.eu">
+    <meta name="twitter:url" content="https://boofdev.eu">
+    <meta property="og:image" content="https://boofdev.eu/data/images/logoround.png">
+    <meta name="twitter:image" content="https://boofdev.eu/data/images/logoround.png">
     <meta name="description" content="This is my portfolio.">
     <meta name="twitter:description" content="This is my portfolio.">
     <meta property="og:image:width" content="1920">
@@ -68,7 +68,7 @@
             <a href="#contact"><button id="index-intro-contact-btn">Contact</button></a>
         </div>
         <div class="index-socials">
-            <a href="mailto:admin@boofdev.eu.org"><img src="data/images/email-white.svg" alt="Email"></a>
+            <a href="mailto:admin@boofdev.eu"><img src="data/images/email-white.svg" alt="Email"></a>
             <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github"></a>
             <a href="https://www.youtube.com/@Boofydev"><img src="data/images/youtube.svg" alt="Youtube"></a>
         </div>
@@ -119,7 +119,7 @@
             <br>
             <div class="contact-socials">
                 <p class="text">Socials</p>
-                <a href="mailto:admin@boofdev.eu.org"><img src="data/images/email-white.svg" alt="Email"></a>
+                <a href="mailto:admin@boofdev.eu"><img src="data/images/email-white.svg" alt="Email"></a>
                 <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github"></a>
                 <a href="https://www.youtube.com/@Boofydev"><img src="data/images/youtube.svg" alt="Youtube"></a>
             </div>

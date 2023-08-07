@@ -7,7 +7,7 @@
 <MetaTags
     title="Boofdev - Privacy policy"
     description="Privacy policy for boofdev"
-    openGraph={{ url: "https://boofdev.eu.org/privacy", title: "Boofdev - Privacy policy" }}
+    openGraph={{ url: "https://boofdev.eu/privacy", title: "Boofdev - Privacy policy" }}
 />
 
 <Nav/>
@@ -17,7 +17,7 @@
 </svelte:head>
 
 <main style="text-align: center; color: #ffffff;">
-    <h1>Privacy Policy for boofdev.eu.org</h1>
+    <h1>Privacy Policy for boofdev.eu</h1>
     <br />
     <p>By using this site you agree to this privacy policy</p>
     <br />

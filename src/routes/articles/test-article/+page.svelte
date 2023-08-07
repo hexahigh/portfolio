@@ -8,12 +8,12 @@
  title="Boofdev - Test article"
  description="Lorem ipsum"
  openGraph={{
-     url: 'https://boofdev.eu.org/news/test-article',
+     url: 'https://boofdev.eu/news/test-article',
      title: 'Boofdev - Test article',
      description: 'Lorem ipsum',
      images: [
          {
-             url: 'https://boofdev.eu.org/data/images/articles/test-article/1637846620838.jpg',
+             url: 'https://boofdev.eu/data/images/articles/test-article/1637846620838.jpg',
          }
      ]
  }}
