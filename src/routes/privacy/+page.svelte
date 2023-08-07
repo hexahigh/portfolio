@@ -24,7 +24,7 @@
     <h1>Information i collect.</h1>
     <br />
     <p>
-        When you submit the form your ip address is also sent to me.<br /> This is
+        When you submit the contact form your ip address is also sent to me.<br /> This is
         only used so that i can block the ip if it gets used to spam form submissions.
     </p>
     <br />

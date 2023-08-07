@@ -8,7 +8,7 @@
                 <li><a href="/articles">Articles</a></li>
                 <li><a href="/#contact">Contact</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
                 <li><a target="_blank" href="https://patreon.com/boofdev">Donate</a></li>
             </ul>
         </div>

@@ -137,7 +137,7 @@
             <input value="" name="formip" id="formip" type="hidden" required>
             <input value="" name="usedvpn" id="usedvpn" type="hidden" required>
             <p style="font-size: 50%; color:#ffffff">When you submit this form you agree to the <a class="colorurl"
-                    href="privacy.html">Privacy Policy</a></p>
+                    href="/privacy">Privacy Policy</a></p>
             <button id="submitbutton" type="submit">Send Message</button>
             <button class="emailformbutton" id="emailformbutton" type="button">Subscribe to my newsletter</button>
         </form>
