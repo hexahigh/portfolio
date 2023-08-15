@@ -5,7 +5,6 @@
 </script>
 
 <svelte:head>
-    <!-- Bidvertiser2086192 -->
 	<meta name="HandheldFriendly" content="True">
     <meta property="article:published_time" content="">
     <meta property="article:modified_time" content="">
