@@ -5,11 +5,14 @@ export function GET({ url }) {
     const pb = new PocketBase('https://db.080609.xyz');
 
     const ip = url.searchParams.get('ip');
-    const date = url.searchParams.get('date');
+    const page = url.searchParams.get('url');
+    const ua = url.searchParams.get('ua');
 
     pb.collection('homepage_analytics').create({
         ip: ip,
-        time: date,
+        url: page,
+        ua: ua,
     });
 
+    return Response(sent)
 }
