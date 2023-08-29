@@ -1,4 +1,4 @@
-import PocketBase from pocketbase
+import PocketBase from 'pocketbase'
 
 /** @type {import('./$types').RequestHandler} */
 export function GET({ url }) {
