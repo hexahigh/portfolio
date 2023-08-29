@@ -1,8 +1,8 @@
 import PocketBase from pocketbase
 
-const pb = new PocketBase('https://db.080609.xyz');
-
 export function GET({ url }) {
+    const pb = new PocketBase('https://db.080609.xyz');
+
     const ip = url.searchParams.get('ip');
     const date = url.searchParams.get('date');
 
