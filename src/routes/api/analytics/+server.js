@@ -1,5 +1,6 @@
 import PocketBase from pocketbase
 
+/** @type {import('./$types').RequestHandler} */
 export function GET({ url }) {
     const pb = new PocketBase('https://db.080609.xyz');
 
