@@ -1,4 +1,8 @@
-const ip = $.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip").ip
+const ip = ""
+
+$.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip", function(data) {
+    ip = data.ip
+});
 const ua = window.navigator.userAgent
 const page = window.location
 
