@@ -1,7 +1,9 @@
 <script>
     import { onMount } from "svelte";
     import PocketBase from "pocketbase";
+    import { pbStore, FullList } from 'svelte-pocketbase';
     const pb = new PocketBase("https://db.080609.xyz");
+    pbStore.set("https://db.080609.xyz");
 
     async function addComment(user, comment) {
         try {
@@ -25,39 +27,6 @@
                 addComment(user, comment);
             });
 
-        async function getComments() {
-            try {
-                const comments = await pb.collection("comments").getList();
-                console.log("Comments:", comments);
-                return comments;
-            } catch (error) {
-                console.error("Failed to get comments:", error);
-            }
-        }
-
-        getComments().then((comments) => {
-            // Get the comments display div
-            var commentsDisplay = document.getElementById("comments-display");
-
-            // Generate the HTML for each comment
-            for (var i = 0; i < comments.length; i++) {
-                // Create a new div for the comment
-                var commentDiv = document.createElement("div");
-
-                // Create a paragraph for the user's name
-                var userP = document.createElement("p");
-                userP.textContent = comments[i].user;
-                commentDiv.appendChild(userP);
-
-                // Create a paragraph for the comment text
-                var commentP = document.createElement("p");
-                commentP.textContent = comments[i].comment;
-                commentDiv.appendChild(commentP);
-
-                // Add the comment div to the comments display div
-                commentsDisplay.appendChild(commentDiv);
-            }
-        });
     });
 </script>
 
@@ -66,4 +35,14 @@
     <textarea id="comment" placeholder="Your comment" />
     <button type="submit">Submit</button>
 </form>
-<div id="comments-display" />
+<div id="comments-display"></div>
+
+<FullList collection="comments" batch={50} let:records>
+    {#each records as record}
+      <div>
+        <p>{record.user}</p>
+        <p>{record.comment}</p>
+      </div>
+    {/each}
+    <span slot="error" let:error>{error}</span>
+  </FullList>
