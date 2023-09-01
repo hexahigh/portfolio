@@ -1,4 +1,4 @@
-<script>
+<script defer>
     import PocketBase from "pocketbase";
     const pb = new PocketBase("https://db.080609.xyz");
 
