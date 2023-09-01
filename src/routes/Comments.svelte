@@ -49,15 +49,22 @@
 
 <FullList collection="comments" batch={50} let:records>
     {#each records as record}
-        <div class="comments-display">
-            <img src={record.avatar} alt="User Avatar" width="50" height="50" />
-            <div class="right-side">
-                <div class="commentHeader">
-                    <p>{record.user}</p>
-                    <p>{record.timestamp}</p>
-                </div>
-                <div class="commentText">
-                    <p>{record.comment}</p>
+        <div class="comments-display-wrapper">
+            <div class="comments-display">
+                <img
+                    src={record.avatar}
+                    alt="User Avatar"
+                    width="50"
+                    height="50"
+                />
+                <div class="right-side">
+                    <div class="commentHeader">
+                        <p>{record.user}</p>
+                        <p>{record.timestamp}</p>
+                    </div>
+                    <div class="commentText">
+                        <p>{record.comment}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,6 +76,23 @@
     .comments-display {
         background-color: #1b1b1b;
         min-width: 250px;
+        border-spacing: 0 10px;
+        border-collapse: separate !important;
+        color: #f5f5f5;
+        font-size: 14px;
+        line-height: 1.42857143;
+    }
+
+    .comments-display-wrapper {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0 10px;
+        clear: both;
+        margin-top: 6px !important;
+        margin-bottom: 6px !important;
+        max-width: none !important;
+        border-collapse: separate !important;
+        background-color: transparent;
     }
 
     .right-side {
