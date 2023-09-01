@@ -1,15 +1,6 @@
-<script defer>
+<script>
     import PocketBase from "pocketbase";
     const pb = new PocketBase("https://db.080609.xyz");
-
-    document
-        .getElementById("comment-form")
-        .addEventListener("submit", function (event) {
-            event.preventDefault();
-            var user = document.getElementById("user").value;
-            var comment = document.getElementById("comment").value;
-            addComment(user, comment);
-        });
 
     async function addComment(user, comment) {
         try {
