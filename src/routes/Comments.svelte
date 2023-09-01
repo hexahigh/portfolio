@@ -1,27 +1,28 @@
 <script>
     import { onMount } from "svelte";
     import axios from "axios";
+    import { createAvatar } from "@dicebear/core";
+    import { identicon } from "@dicebear/collection";
     import PocketBase from "pocketbase";
     import { pbStore, FullList } from "svelte-pocketbase";
     const pb = new PocketBase("https://db.080609.xyz");
     pbStore.set("https://db.080609.xyz");
 
-    async function addComment(user, comment) {
+    async function addComment(PID, user, comment ) {
         try {
-            // Generate the avatar URL using the DiceBear API
-            const avatarUrl = `https://avatars.dicebear.com/api/avataaars/${user}.svg`;
 
-            // Make a request to retrieve the avatar image
-            const response = await axios.get(avatarUrl, {
-                responseType: "text",
-            });
+            let avatar = createAvatar(identicon, {
+                seed: user,
+                size: 128,
+            }).toDataUriSync();
 
             // Create a new comment object with the user's avatar
             const newComment = await pb.collection("comments").create({
+                PID,
                 user,
                 comment,
                 timestamp: new Date().toISOString(), // store the current date and time as the timestamp
-                avatar: response.data, // Store the SVG avatar image
+                avatar: avatar
             });
             console.log("Comment added:", newComment);
         } catch (error) {
@@ -33,44 +34,49 @@
             .getElementById("comment-form")
             .addEventListener("submit", function (event) {
                 event.preventDefault();
+                var PID = window.location.pathname;
                 var user = document.getElementById("user").value;
                 var comment = document.getElementById("comment").value;
-                addComment(user, comment);
+                addComment(PID, user, comment);
             });
     });
 </script>
 
 <form id="comment-form">
-    <input type="text" id="user" placeholder="Your name" />
-    <textarea id="comment" placeholder="Your comment" />
+    <input type="text" id="user" placeholder="Your name" required/>
+    <textarea id="comment" placeholder="Your comment" required/>
     <button type="submit">Submit</button>
 </form>
 <div id="comments-display" />
 
-<FullList collection="comments" batch={50} let:records>
-    {#each records as record}
-        <div class="comments-display-wrapper">
+<div class="comments-display-wrapper">
+    <FullList collection="comments" batch={50} let:records>
+        {#each records.filter((record) => record.PID === window.location.pathname) as record}
             <div class="comments-display">
-                <img
-                    src={record.avatar}
-                    alt="User Avatar"
-                    width="50"
-                    height="50"
-                />
+                <div class="avatar">
+                    <img
+                        src={record.avatar}
+                        alt="User Avatar"
+                        width="50"
+                        height="50"
+                    />
+                </div>
                 <div class="right-side">
                     <div class="commentHeader">
-                        <p>{record.user}</p>
-                        <p>{record.timestamp}</p>
+                        Written by <p style="color: #56922c; display: inline;">
+                            {record.user}
+                        </p>
+                        at {record.timestamp}
                     </div>
                     <div class="commentText">
                         <p>{record.comment}</p>
                     </div>
                 </div>
             </div>
-        </div>
-    {/each}
-    <span slot="error" let:error>{error}</span>
-</FullList>
+        {/each}
+        <span slot="error" let:error>{error}</span>
+    </FullList>
+</div>
 
 <style>
     .comments-display {
@@ -93,6 +99,8 @@
         max-width: none !important;
         border-collapse: separate !important;
         background-color: transparent;
+        max-height: 500px;
+        overflow-y: auto; /* Add vertical scroll if needed */
     }
 
     .right-side {
@@ -115,5 +123,13 @@
         word-wrap: break-word;
         min-height: 30px;
         padding-bottom: 10px;
+    }
+
+    .avatar {
+        float: left;
+        width: 70px;
+        height: 100%;
+        border-radius: 2px;
+        margin: 0 15px;
     }
 </style>
