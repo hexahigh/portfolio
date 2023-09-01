@@ -4,11 +4,21 @@
     import { createAvatar } from "@dicebear/core";
     import { identicon } from "@dicebear/collection";
     import PocketBase from "pocketbase";
-    import { pbStore, FullList } from "svelte-pocketbase";
+
     const pb = new PocketBase("https://db.080609.xyz");
-    pbStore.set("https://db.080609.xyz");
 
     let databaseError = false;
+    let comments = [];
+
+    async function fetchComments() {
+        try {
+            comments = await pb.collection("comments").getFullList();
+            comments = comments.filter(comment => comment.PID === window.location.pathname);
+        } catch (error) {
+            console.error("Failed to fetch comments:", error);
+            databaseError = true;
+        }
+    }
 
     async function addComment(PID, user, comment) {
         try {
@@ -17,19 +27,22 @@
                 size: 128,
             }).toDataUriSync();
 
-            // Create a new comment object with the user's avatar
-            const newComment = await pb.collection("comments").create({
+            await pb.collection("comments").create({
                 PID,
                 user,
                 comment,
-                timestamp: new Date().toISOString(), // store the current date and time as the timestamp
+                timestamp: new Date().toISOString(),
                 avatar: avatar,
             });
-            console.log("Comment added:", newComment);
+
+            fetchComments();
         } catch (error) {
             console.error("Failed to add comment:", error);
         }
     }
+
+    onMount(fetchComments);
+
     onMount(() => {
         document
             .getElementById("comment-form")
@@ -53,49 +66,46 @@
 <div id="comments-display" />
 
 <div class="comments-display-wrapper">
-    <FullList
-        collection="comments"
-        batch={50}
-        let:records
-        on:error={() => (databaseError = true)}
-    >
-        {#each records.filter((record) => record.PID === window.location.pathname) as record}
-            {#if databaseError}
-                <div class="error-notice">
-                    <img alt="Alert icon" src="/data/images/alert.svg" width="50" height="50"><br>
-                    Unable to retrieve comments. The database may be down or you might need to refresh.
+    {#each comments as record}
+        <div class="comments-display">
+            <div class="avatar">
+                <img
+                    src={record.avatar}
+                    alt="User Avatar"
+                    width="50"
+                    height="50"
+                />
+            </div>
+            <div class="right-side">
+                <div class="commentHeader">
+                    Written by <p
+                        style="color: #56922c; display: inline;"
+                    >
+                        {record.user}
+                    </p>
+                    at <Time
+                        timestamp={record.timestamp}
+                        format="DD/MM/YYYY, hh:mm"
+                    />
                 </div>
-            {:else}
-                <div class="comments-display">
-                    <div class="avatar">
-                        <img
-                            src={record.avatar}
-                            alt="User Avatar"
-                            width="50"
-                            height="50"
-                        />
-                    </div>
-                    <div class="right-side">
-                        <div class="commentHeader">
-                            Written by <p
-                                style="color: #56922c; display: inline;"
-                            >
-                                {record.user}
-                            </p>
-                            at <Time
-                                timestamp={record.timestamp}
-                                format="DD/MM/YYYY, hh:mm"
-                            />
-                        </div>
-                        <div class="commentText">
-                            <p>{record.comment}</p>
-                        </div>
-                    </div>
+                <div class="commentText">
+                    <p>{record.comment}</p>
                 </div>
-            {/if}
-        {/each}
-        <span slot="error" let:error>{error}</span>
-    </FullList>
+            </div>
+        </div>
+    {/each}
+    {#if databaseError}
+        <div class="error-notice">
+            <img
+                alt="Alert icon"
+                src="/data/images/alert.svg"
+                width="50"
+                height="50"
+            /><br />
+            Unable to retrieve comments. The database may be down or you
+            might need to refresh.
+        </div>
+    {/if}
 </div>
 
 <style>
@@ -124,7 +134,6 @@
         max-width: none !important;
         border-collapse: separate !important;
         background-color: transparent;
-        max-height: 500px;
         overflow-y: auto; /* Add vertical scroll if needed */
     }
 
