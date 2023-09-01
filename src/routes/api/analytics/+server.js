@@ -8,11 +8,11 @@ export function GET({ url }) {
     const page = url.searchParams.get('url');
     const ua = url.searchParams.get('ua');
 
-    pb.collection('homepage_analytics').create({
+    let send = pb.collection('homepage_analytics').create({
         ip: ip,
         url: page,
         ua: ua,
     });
 
-    return Response(sent)
+    return Response(send)
 }
