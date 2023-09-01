@@ -1,4 +1,4 @@
-const ip = ""
+let ip = ""
 
 $.getJSON("https://europe-central2-portfolio-website-374313.cloudfunctions.net/getip", function(data) {
     ip = data.ip
