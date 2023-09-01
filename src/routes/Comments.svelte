@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import axios from "axios";
+    import Time from "svelte-time";
     import { createAvatar } from "@dicebear/core";
     import { identicon } from "@dicebear/collection";
     import PocketBase from "pocketbase";
@@ -8,9 +8,10 @@
     const pb = new PocketBase("https://db.080609.xyz");
     pbStore.set("https://db.080609.xyz");
 
-    async function addComment(PID, user, comment ) {
-        try {
+    let databaseError = false;
 
+    async function addComment(PID, user, comment) {
+        try {
             let avatar = createAvatar(identicon, {
                 seed: user,
                 size: 128,
@@ -22,7 +23,7 @@
                 user,
                 comment,
                 timestamp: new Date().toISOString(), // store the current date and time as the timestamp
-                avatar: avatar
+                avatar: avatar,
             });
             console.log("Comment added:", newComment);
         } catch (error) {
@@ -42,43 +43,67 @@
     });
 </script>
 
+<h2 style="color: #f5f5f5;">Comments:</h2>
+
 <form id="comment-form">
-    <input type="text" id="user" placeholder="Your name" required/>
-    <textarea id="comment" placeholder="Your comment" required/>
+    <input type="text" id="user" placeholder="Your name" required />
+    <textarea id="comment" placeholder="Your comment" required />
     <button type="submit">Submit</button>
 </form>
 <div id="comments-display" />
 
 <div class="comments-display-wrapper">
-    <FullList collection="comments" batch={50} let:records>
+    <FullList
+        collection="comments"
+        batch={50}
+        let:records
+        on:error={() => (databaseError = true)}
+    >
         {#each records.filter((record) => record.PID === window.location.pathname) as record}
-            <div class="comments-display">
-                <div class="avatar">
-                    <img
-                        src={record.avatar}
-                        alt="User Avatar"
-                        width="50"
-                        height="50"
-                    />
+            {#if databaseError}
+                <div class="error-notice">
+                    <img alt="Alert icon" src="/data/images/alert.svg" width="50" height="50"><br>
+                    Unable to retrieve comments. The database may be down or you might need to refresh.
                 </div>
-                <div class="right-side">
-                    <div class="commentHeader">
-                        Written by <p style="color: #56922c; display: inline;">
-                            {record.user}
-                        </p>
-                        at {record.timestamp}
+            {:else}
+                <div class="comments-display">
+                    <div class="avatar">
+                        <img
+                            src={record.avatar}
+                            alt="User Avatar"
+                            width="50"
+                            height="50"
+                        />
                     </div>
-                    <div class="commentText">
-                        <p>{record.comment}</p>
+                    <div class="right-side">
+                        <div class="commentHeader">
+                            Written by <p
+                                style="color: #56922c; display: inline;"
+                            >
+                                {record.user}
+                            </p>
+                            at <Time
+                                timestamp={record.timestamp}
+                                format="DD/MM/YYYY, hh:mm"
+                            />
+                        </div>
+                        <div class="commentText">
+                            <p>{record.comment}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {/if}
         {/each}
         <span slot="error" let:error>{error}</span>
     </FullList>
 </div>
 
 <style>
+    .error-notice {
+        text-align: center;
+        color: #f5a803;
+    }
+
     .comments-display {
         background-color: #1b1b1b;
         min-width: 250px;
