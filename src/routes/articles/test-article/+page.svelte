@@ -1,5 +1,6 @@
 <script>
     import Nav from "../../Nav.svelte";
+    import Comments from "../../Comments.svelte";
     import Footer from "../../Footer.svelte";
     import { MetaTags } from 'svelte-meta-tags';
 </script>
@@ -79,6 +80,7 @@
             </p>
         </div>
     </div>
+    <Comments/>
 </main>
 
 <Footer />
