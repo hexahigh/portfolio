@@ -48,6 +48,15 @@
             commentsDisplay.appendChild(commentDiv);
         }
     });
+
+    document
+        .getElementById("comment-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+            var user = document.getElementById("user").value;
+            var comment = document.getElementById("comment").value;
+            addComment(user, comment);
+        });
 </script>
 
 <form id="comment-form">
