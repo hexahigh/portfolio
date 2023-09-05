@@ -83,10 +83,11 @@
                     if (array.includes(element)) {
                         blocked = true;
                         console.log(blocked)
+                        return true
                     }
                 });
             });
-        return blocked;
+        return false;
     }
 </script>
 
