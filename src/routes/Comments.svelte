@@ -63,9 +63,9 @@
     });
 
     onMount(async () => {
-        const response = await fetch("/path/to/your/file.txt");
+        const response = await fetch("/data/text/bad-words.txt");
         const text = await response.text();
-        badWords = text.split("\n"); // assuming each word is on a new line
+        badWords = text.split("\n");
     });
 
     function containsBadWord(input) {
