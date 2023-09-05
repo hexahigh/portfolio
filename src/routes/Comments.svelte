@@ -82,6 +82,7 @@
                     console.log(element)
                     if (array.includes(element)) {
                         blocked = true;
+                        console.log(blocked)
                     }
                 });
             });
