@@ -15,7 +15,9 @@
         try {
             comments = await pb.collection("comments").getFullList();
             comments = comments.filter(
-                (comment) => comment.PID === window.location.pathname && comment.blocked !== true
+                (comment) =>
+                    comment.PID === window.location.pathname &&
+                    comment.blocked !== true
             );
         } catch (error) {
             console.error("Failed to fetch comments:", error);
@@ -24,12 +26,11 @@
     }
 
     async function addComment(PID, user, comment) {
-
         let blocked = false;
 
         if (checkBad(comment) == true) {
-            blocked = true
-        };
+            blocked = true;
+        }
 
         try {
             let avatar = createAvatar(identicon, {
@@ -68,7 +69,7 @@
 
     function checkBad(input) {
         let blocked = false;
-        let input2 = input.split(" ")
+        let input2 = input.split(" ");
 
         fetch("/data/text/bad-words.txt")
             .then((response) => response.arrayBuffer())
@@ -76,9 +77,11 @@
                 const decoder = new TextDecoder("utf-8");
                 const data = decoder.decode(new Uint8Array(arrayBuffer));
                 const array = data.split("\n");
-                if (input2.forEach((element) => array.includes(element)) ) {
-                    blocked = true;
-                }
+                input2.array.forEach(element => {
+                    if (array.includes(element)) {
+                        blocked = true;
+                    }
+                });
             });
         return blocked;
     }
