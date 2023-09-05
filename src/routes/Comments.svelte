@@ -10,6 +10,7 @@
 
     let databaseError = false;
     let comments = [];
+    let badWords = [];
 
     async function fetchComments() {
         try {
@@ -38,7 +39,7 @@
                 comment,
                 timestamp: new Date().toISOString(),
                 avatar: avatar,
-                blocked: blocked,
+                blocked: containsBadWord,
             });
 
             fetchComments();
@@ -60,6 +61,21 @@
                 addComment(PID, user, comment);
             });
     });
+
+    onMount(async () => {
+        const response = await fetch("/path/to/your/file.txt");
+        const text = await response.text();
+        badWords = text.split("\n"); // assuming each word is on a new line
+    });
+
+    function containsBadWord(input) {
+        for (let i = 0; i < badWords.length; i++) {
+            if (input.includes(badWords[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
 </script>
 
 <h2 style="color: #f5f5f5;">Comments:</h2>
