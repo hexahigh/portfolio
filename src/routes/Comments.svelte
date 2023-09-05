@@ -28,6 +28,8 @@
     async function addComment(PID, user, comment) {
         let blocked = false;
 
+        console.log(checkBad(comment))
+
         if (checkBad(comment) == true) {
             blocked = true;
         }
