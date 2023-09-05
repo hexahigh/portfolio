@@ -68,13 +68,15 @@
 
     function checkBad(input) {
         let blocked = false;
+        let input2 = input.split(" ")
+
         fetch("/data/text/bad-words.txt")
             .then((response) => response.arrayBuffer())
             .then((arrayBuffer) => {
                 const decoder = new TextDecoder("utf-8");
                 const data = decoder.decode(new Uint8Array(arrayBuffer));
                 const array = data.split("\n");
-                if (array.includes(input)) {
+                if (input2.forEach((element) => array.includes(element)) ) {
                     blocked = true;
                 }
             });
