@@ -15,7 +15,7 @@
         try {
             comments = await pb.collection("comments").getFullList();
             comments = comments.filter(
-                (comment) => comment.PID === window.location.pathname
+                (comment) => comment.PID === window.location.pathname && comment.blocked !== true
             );
         } catch (error) {
             console.error("Failed to fetch comments:", error);
