@@ -30,6 +30,13 @@
     }
 
     async function addComment(PID, user, comment) {
+        
+        if (exceedsCharacterLimit(user, 20) || exceedsCharacterLimit(comment, 300)) {
+            console.error(
+                "Username or comment exceeds the maximum character limit."
+            );
+            return;
+        }
         try {
             let avatar = createAvatar(identicon, {
                 seed: user,
@@ -76,6 +83,13 @@
             if (input.includes(badWords[i])) {
                 return true;
             }
+        }
+        return false;
+    }
+
+    function exceedsCharacterLimit(input, limit) {
+        if (input.length > limit) {
+            return true;
         }
         return false;
     }
