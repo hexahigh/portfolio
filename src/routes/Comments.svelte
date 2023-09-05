@@ -42,7 +42,7 @@
                 comment,
                 timestamp: new Date().toISOString(),
                 avatar: avatar,
-                blocked: containsBadWord,
+                blocked: containsBadWord(comment),
             });
 
             fetchComments();
