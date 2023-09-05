@@ -89,10 +89,13 @@
     <button type="submit">Submit</button>
 </form>
 <div id="comments-display" />
-<div class="switch">
-    <input type="checkbox" id="switch" bind:checked={showBlocked} />
-    <label for="switch">Show blocked comments</label>
-</div>  
+<div class="switch-container">
+    <p class="text">Show blocked comments:</p>
+    <div class="switch">
+        <input type="checkbox" id="switch" bind:checked={showBlocked} />
+        <label for="switch" />
+    </div>
+</div>
 <div class="comments-display-wrapper">
     {#each comments as record}
         <div class="comments-display">
@@ -135,6 +138,12 @@
 </div>
 
 <style>
+    .switch-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     /* The switch - the box around the slider */
     .switch {
         position: relative;
