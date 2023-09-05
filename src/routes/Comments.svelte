@@ -4,6 +4,7 @@
     import { createAvatar } from "@dicebear/core";
     import { identicon } from "@dicebear/collection";
     import PocketBase from "pocketbase";
+    import { each } from "svelte/internal";
 
     const pb = new PocketBase("https://db.080609.xyz");
 
@@ -13,7 +14,9 @@
     async function fetchComments() {
         try {
             comments = await pb.collection("comments").getFullList();
-            comments = comments.filter(comment => comment.PID === window.location.pathname);
+            comments = comments.filter(
+                (comment) => comment.PID === window.location.pathname
+            );
         } catch (error) {
             console.error("Failed to fetch comments:", error);
             databaseError = true;
@@ -21,6 +24,13 @@
     }
 
     async function addComment(PID, user, comment) {
+
+        let blocked = false;
+
+        if (checkBad(comment) == true) {
+            blocked = true
+        };
+
         try {
             let avatar = createAvatar(identicon, {
                 seed: user,
@@ -33,6 +43,7 @@
                 comment,
                 timestamp: new Date().toISOString(),
                 avatar: avatar,
+                blocked: blocked,
             });
 
             fetchComments();
@@ -54,6 +65,21 @@
                 addComment(PID, user, comment);
             });
     });
+
+    function checkBad(input) {
+        let blocked = false;
+        fetch("/data/text/bad-words.txt")
+            .then((response) => response.arrayBuffer())
+            .then((arrayBuffer) => {
+                const decoder = new TextDecoder("utf-8");
+                const data = decoder.decode(new Uint8Array(arrayBuffer));
+                const array = data.split("\n");
+                if (array.includes(input)) {
+                    blocked = true;
+                }
+            });
+        return blocked;
+    }
 </script>
 
 <h2 style="color: #f5f5f5;">Comments:</h2>
@@ -78,9 +104,7 @@
             </div>
             <div class="right-side">
                 <div class="commentHeader">
-                    Written by <p
-                        style="color: #56922c; display: inline;"
-                    >
+                    Written by <p style="color: #56922c; display: inline;">
                         {record.user}
                     </p>
                     at <Time
@@ -102,8 +126,8 @@
                 width="50"
                 height="50"
             /><br />
-            Unable to retrieve comments. The database may be down or you
-            might need to refresh.
+            Unable to retrieve comments. The database may be down or you might need
+            to refresh.
         </div>
     {/if}
 </div>
