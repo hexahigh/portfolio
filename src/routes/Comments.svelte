@@ -80,17 +80,12 @@
                 const data = decoder.decode(new Uint8Array(arrayBuffer));
                 const array = data.split("\n");
                 console.log(array)
-                input2.forEach(element => {
-                    console.log(element)
-                    if (array.includes(element)) {
-                        blocked = true;
-                        console.log(blocked)
-                        return true
-                    }
+                if(input2.some(r=> array.indexOf(r) >= 0)) {
+                    return true;
+                }
                 });
-            });
-        return false;
-    }
+                return false;
+            };
 </script>
 
 <h2 style="color: #f5f5f5;">Comments:</h2>
