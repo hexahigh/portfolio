@@ -77,7 +77,7 @@
                 const decoder = new TextDecoder("utf-8");
                 const data = decoder.decode(new Uint8Array(arrayBuffer));
                 const array = data.split("\n");
-                input2.array.forEach(element => {
+                input2.forEach(element => {
                     if (array.includes(element)) {
                         blocked = true;
                     }
