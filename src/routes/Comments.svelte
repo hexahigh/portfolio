@@ -1,4 +1,5 @@
 <script>
+    // Importing necessary modules and functions
     import { onMount } from "svelte";
     import Time from "svelte-time";
     import { createAvatar } from "@dicebear/core";
@@ -6,18 +7,24 @@
     import PocketBase from "pocketbase";
     import { each } from "svelte/internal";
 
+    // Initializing PocketBase with the database URL
     const pb = new PocketBase("https://db.080609.xyz");
 
+    // Variables to hold comments, error state, and other settings
     let databaseError = false;
     let comments = [];
     let badWords = [];
     let showBlocked = false;
 
+    // Fetch comments whenever showBlocked changes
     $: fetchComments(), showBlocked;
 
+    // Function to fetch comments from the database
     async function fetchComments() {
         try {
+            // Get all comments
             comments = await pb.collection("comments").getFullList();
+            // Filter comments based on the current page and blocked status
             comments = comments.filter(
                 (comment) =>
                     comment.PID === window.location.pathname &&
@@ -29,20 +36,26 @@
         }
     }
 
+    // Function to add a comment to the database
     async function addComment(PID, user, comment) {
-        
-        if (exceedsCharacterLimit(user, 20) || exceedsCharacterLimit(comment, 300)) {
+        // Check if user or comment exceeds character limit
+        if (
+            exceedsCharacterLimit(user, 20) ||
+            exceedsCharacterLimit(comment, 300)
+        ) {
             console.error(
                 "Username or comment exceeds the maximum character limit."
             );
             return;
         }
         try {
+            // Create avatar for the user
             let avatar = createAvatar(identicon, {
                 seed: user,
                 size: 128,
             }).toDataUriSync();
 
+            // Add comment to the database
             await pb.collection("comments").create({
                 PID,
                 user,
@@ -52,14 +65,17 @@
                 blocked: containsBadWord(comment),
             });
 
+            // Fetch comments again to update the list
             fetchComments();
         } catch (error) {
             console.error("Failed to add comment:", error);
         }
     }
 
+    // Fetch comments on mount
     onMount(fetchComments);
 
+    // Add event listener to the comment form on mount
     onMount(() => {
         document
             .getElementById("comment-form")
@@ -72,12 +88,14 @@
             });
     });
 
+    // Fetch bad words list on mount
     onMount(async () => {
         const response = await fetch("/data/text/bad-words.txt");
         const text = await response.text();
         badWords = text.split("\n");
     });
 
+    // Function to check if input contains any bad word
     function containsBadWord(input) {
         for (let i = 0; i < badWords.length; i++) {
             if (input.includes(badWords[i])) {
@@ -87,6 +105,7 @@
         return false;
     }
 
+    // Function to check if input exceeds character limit
     function exceedsCharacterLimit(input, limit) {
         if (input.length > limit) {
             return true;
