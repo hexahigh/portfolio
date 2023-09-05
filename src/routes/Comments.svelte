@@ -26,14 +26,6 @@
     }
 
     async function addComment(PID, user, comment) {
-        let blocked = false;
-
-        console.log(checkBad(comment))
-
-        if (checkBad(comment) == true) {
-            blocked = true;
-        }
-
         try {
             let avatar = createAvatar(identicon, {
                 seed: user,
@@ -68,24 +60,6 @@
                 addComment(PID, user, comment);
             });
     });
-
-    function checkBad(input) {
-        let blocked = false;
-        let input2 = input.split(" ");
-
-        fetch("/data/text/bad-words.txt")
-            .then((response) => response.arrayBuffer())
-            .then((arrayBuffer) => {
-                const decoder = new TextDecoder("utf-8");
-                const data = decoder.decode(new Uint8Array(arrayBuffer));
-                const array = data.split("\n");
-                console.log(array)
-                if(input2.some(r=> array.indexOf(r) >= 0)) {
-                    return true;
-                }
-                });
-                return false;
-            };
 </script>
 
 <h2 style="color: #f5f5f5;">Comments:</h2>
