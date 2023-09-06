@@ -3,23 +3,16 @@
 </script>
 
 <body>
-    <img src="https://http.cat/{$page.status}" alt={$page.status} class="bg" />
+    <img src="https://http.cat/{$page.status}" alt={$page.status} class="img" />
 </body>
 
 <style>
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-    }
-
-    .bg {
-        /* Full height */
-        height: 100%;
-
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 </style>
