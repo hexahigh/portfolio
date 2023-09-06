@@ -2,17 +2,23 @@
     import { page } from "$app/stores";
 </script>
 
-<body>
-    <img src="https://http.cat/{$page.status}" alt={$page.status} class="img" />
-</body>
+<div class="full-page-image">
+    <img src="https://http.cat/{$page.status}.jpg" alt={$page.status} class="img" />
+</div>
 
 <style>
-    .img {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
+    .full-page-image {
         position: fixed;
         top: 0;
         left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 </style>
