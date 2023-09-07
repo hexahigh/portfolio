@@ -1,15 +1,20 @@
 <script>
     import { page } from "$app/stores";
 </script>
-<h1>{$page.status}</h1>
-<h3>{$page.error.message}</h3>
-<img src="https://http.cat/{$page.status}.jpg" alt={$page.status} class="img"/>
+
+    <img src="https://http.cat/{$page.status}.jpg" alt={$page.status}/>
 
 <style>
-    .img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+    img {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 </style>
