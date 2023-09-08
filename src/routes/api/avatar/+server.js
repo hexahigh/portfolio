@@ -10,7 +10,11 @@ export async function GET() {
 
         const dataUri = avatar.toDataUriSync(); 
         
-        return new Response(dataUri, { status: 200 });
+        return new Response(dataUri, { 
+            status: 200,
+            headers: { 'Content-Type': 'image/svg+xml' }
+        });
+        
     } catch (error) {
         console.error(error);
         return new Response("An error occurred: ", error, { status: 500 });
