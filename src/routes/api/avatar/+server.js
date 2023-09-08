@@ -8,9 +8,9 @@ export async function GET() {
             seed: makeid(30),
         });
 
-        const dataUri = avatar.toDataUriSync(); 
+        const data = avatar.toString(); 
         
-        return new Response(dataUri, { 
+        return new Response(data, { 
             status: 200,
             headers: { 'Content-Type': 'image/svg+xml' }
         });
