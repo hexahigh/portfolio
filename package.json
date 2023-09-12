@@ -12,7 +12,7 @@
 		"@sveltejs/adapter-auto": "^1.0.0-next.90",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.0.0-next.587",
-		"svelte": "^3.54.0",
+		"svelte": "^4.2.0",
 		"svelte-meta-tags": "^2.8.0",
 		"svelte-pocketbase": "^0.0.4",
 		"svelte-sitemap": "^2.6.0",
