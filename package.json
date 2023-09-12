@@ -11,7 +11,7 @@
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/adapter-static": "^2.0.3",
-		"@sveltejs/kit": "^1.0.0-next.587",
+		"@sveltejs/kit": "^1.24.1",
 		"svelte": "^4.2.0",
 		"svelte-meta-tags": "^2.8.0",
 		"svelte-pocketbase": "^0.0.4",
