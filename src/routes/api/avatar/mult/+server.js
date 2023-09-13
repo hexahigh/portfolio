@@ -3,7 +3,7 @@ import { identicon } from '@dicebear/collection';
 import JSZip from 'jszip';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
-export async function get({ params }) {
+export async function GET({ params }) {
     try {
         const { amount } = params; // Get the 'amount' parameter from the URL
 
