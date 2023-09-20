@@ -26,10 +26,8 @@
 		"@sveltejs/adapter-cloudflare": "^2.3.3",
 		"@sveltejs/adapter-vercel": "^3.0.3",
 		"axios": "^1.5.0",
-		"jszip": "^3.10.1",
 		"pocketbase": "^0.18.0",
 		"sharp": "^0.32.5",
-		"svelte-time": "^0.8.0",
-		"torrent-stream": "^1.2.1"
+		"svelte-time": "^0.8.0"
 	}
 }
