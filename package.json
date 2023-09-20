@@ -29,6 +29,7 @@
 		"jszip": "^3.10.1",
 		"pocketbase": "^0.18.0",
 		"sharp": "^0.32.5",
-		"svelte-time": "^0.8.0"
+		"svelte-time": "^0.8.0",
+		"torrent-stream": "^1.2.1"
 	}
 }
