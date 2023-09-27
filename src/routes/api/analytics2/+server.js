@@ -11,7 +11,7 @@ export async function GET({ request }) {
     let sec_gpc = request.headers.get('Sec-Gpc')
     let dnt = request.headers.get('Dnt')
 
-    if(dnt != 0 || sec_gpc != ) {
+    if(dnt != 0 || sec_gpc != 0) {
         ip = "'DNT'"
     };
 
