@@ -4,12 +4,16 @@ import PocketBase from 'pocketbase'
 export async function GET({ request }) {
     const pb = new PocketBase('https://db.080609.xyz');
 
-    const ip = request.headers.get('x-forwarded-for') || request.headers.get('remote_addr');
-    const page = request.headers.get('referer');
-    const ua = request.headers.get('user-agent');
-    const sec_platform = request.headers.get('Sec-Ch-Ua-Platform')
-    const sec_gpc = request.headers.get('Sec-Gpc')
-    const dnt = request.headers.get('Dnt')
+    let ip = request.headers.get('x-forwarded-for') || request.headers.get('remote_addr');
+    let page = request.headers.get('referer');
+    let ua = request.headers.get('user-agent');
+    let sec_platform = request.headers.get('Sec-Ch-Ua-Platform')
+    let sec_gpc = request.headers.get('Sec-Gpc')
+    let dnt = request.headers.get('Dnt')
+
+    if(dnt != 0) {
+        ip = "DNT"
+    };
 
     try {
         await pb.collection('analytics_2').create({
