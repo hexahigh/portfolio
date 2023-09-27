@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase'
 
 /** @type {import('./$types').RequestHandler} */
-export async function GET(request) {
+export async function GET({ request }) {
     const pb = new PocketBase('https://db.080609.xyz');
 
     const ip = request.headers.get('x-forwarded-for') || request.headers.get('remote_addr');
@@ -9,7 +9,7 @@ export async function GET(request) {
     const ua = request.headers.get('user-agent');
 
     try {
-        await pb.collection('homepage_analytics').create({
+        await pb.collection('analytics_2').create({
             ip: ip,
             url: page,
             ua: ua,
