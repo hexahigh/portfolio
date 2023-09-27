@@ -12,10 +12,13 @@
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.25.0",
+		"autoprefixer": "^10.4.16",
+		"postcss": "^8.4.30",
 		"svelte": "^4.2.1",
 		"svelte-meta-tags": "^3.0.4",
 		"svelte-pocketbase": "^0.0.4",
 		"svelte-sitemap": "^2.6.0",
+		"tailwindcss": "^3.3.3",
 		"vite": "^4.4.9"
 	},
 	"type": "module",
