@@ -11,9 +11,11 @@ export async function GET({ request }) {
     let sec_gpc = request.headers.get('Sec-Gpc')
     let dnt = request.headers.get('Dnt')
 
+    /*
     if(dnt == "1" || sec_gpc == "1") {
         ip = "'DNT'"
     };
+    */
 
     try {
         await pb.collection('analytics_2').create({
