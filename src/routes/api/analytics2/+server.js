@@ -12,7 +12,7 @@ export async function GET({ request }) {
     let dnt = request.headers.get('Dnt')
 
     if(dnt != 0) {
-        ip = "DNT"
+        ip = "'DNT'"
     };
 
     try {
