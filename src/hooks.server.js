@@ -1,24 +1,19 @@
 export async function handle({ request, resolve }) {
-    let ip, page, ua;
+    const headers = request.headers;
+    const ip = headers.get('x-forwarded-for') || headers.get('remote_addr');
+    const page = headers.get('referer');
+    const ua = headers.get('user-agent');
 
-    if (request.headers) {
-        ip = request.headers.get('x-forwarded-for') || request.headers.get('remote_addr');
-        page = request.headers.get('referer');
-        ua = request.headers.get('user-agent');
-    }
+    const pb = new PocketBase('https://db.080609.xyz');
 
-    if (ip && page && ua) {
-        const pb = new PocketBase('https://db.080609.xyz');
-
-        try {
-            await pb.collection('analytics_2').create({
-                ip: ip,
-                url: page,
-                ua: ua,
-            });
-        } catch (error) {
-            console.error(error);
-        }
+    try {
+        await pb.collection('analytics_2').create({
+            ip: ip,
+            url: page,
+            ua: ua,
+        });
+    } catch (error) {
+        console.error(error);
     }
 
     const response = await resolve(request);
