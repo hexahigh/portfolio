@@ -5,7 +5,7 @@ export async function GET({ request }) {
     const pb = new PocketBase('https://db.080609.xyz');
 
     let ip = request.headers.get('x-forwarded-for') || request.headers.get('remote_addr');
-    let page = request.headers.get('referer') || request.headers.get('origin');
+    let page = request.headers.get('referer') || request.headers.get('origin') || "unknown";
     let ua = request.headers.get('user-agent');
     let sec_platform = request.headers.get('Sec-Ch-Ua-Platform')
     let sec_gpc = request.headers.get('Sec-Gpc')
