@@ -10,6 +10,7 @@ export async function GET({ request }) {
     let sec_platform = request.headers.get('Sec-Ch-Ua-Platform')
     let sec_gpc = request.headers.get('Sec-Gpc')
     let dnt = request.headers.get('Dnt')
+    let sec_platform_version = request.headers.get('Sec-CH-UA-Platform-Version')
 
     /*
     if(dnt == "1" || sec_gpc == "1") {
@@ -23,6 +24,7 @@ export async function GET({ request }) {
             url: page,
             ua: ua,
             sec_platform: sec_platform,
+            sec_platform_version: sec_platform_version,
             sec_gpc: sec_gpc,
             dnt: dnt,
         });
