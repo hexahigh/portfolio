@@ -12,8 +12,8 @@ export async function GET({ request }) {
     let dnt = request.headers.get('Dnt')
     let sec_platform_version = request.headers.get('Sec-CH-UA-Platform-Version')
 
-    if(page.toLowerCase().indexOf("://boofdev.eu") !== -1) {
-        return {status: 418, body: 'I\'m a teapot'};
+    if(page.toLowerCase().indexOf("://boofdev.eu") == -1) {
+        return new Response({status: 418});
     }
     
 
