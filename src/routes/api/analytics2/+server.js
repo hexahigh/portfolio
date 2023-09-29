@@ -13,7 +13,8 @@ export async function GET({ request }) {
     let sec_platform_version = request.headers.get('Sec-CH-UA-Platform-Version')
 
     if(page.toLowerCase().indexOf("://boofdev.eu") == -1) {
-        return new Response({status: 418});
+        console.log("blocked")
+        return new Response(JSON.stringify({ message: "blocked" }), { status: 418 }) 
     }
     
 
