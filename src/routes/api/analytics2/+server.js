@@ -12,9 +12,10 @@ export async function GET({ request }) {
     let dnt = request.headers.get('Dnt')
     let sec_platform_version = request.headers.get('Sec-CH-UA-Platform-Version')
 
-    if(page.toLowerCase().indexOf("://boofdev.eu")) {
-        return new Response({status: 418});
+    if(page.toLowerCase().indexOf("://boofdev.eu") !== -1) {
+        return {status: 418, body: 'I\'m a teapot'};
     }
+    
 
     /*
     if(dnt == "1" || sec_gpc == "1") {
