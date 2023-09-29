@@ -14,7 +14,7 @@ export async function GET({ request }) {
 
     if(page.toLowerCase().indexOf("://boofdev.eu") == -1) {
         console.log("blocked")
-        return new Response(JSON.stringify({ message: "blocked" }), { status: 418 }) 
+        return new Response("418 (I'm a teapot)", { status: 418 })
     }
     
 
