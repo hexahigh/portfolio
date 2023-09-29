@@ -12,6 +12,10 @@ export async function GET({ request }) {
     let dnt = request.headers.get('Dnt')
     let sec_platform_version = request.headers.get('Sec-CH-UA-Platform-Version')
 
+    if(page.toLowerCase().indexOf("://boofdev.eu")) {
+        return new Response({status: 418});
+    }
+
     /*
     if(dnt == "1" || sec_gpc == "1") {
         ip = "'DNT'"
