@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.5.1
     version: 1.5.1
   pocketbase:
-    specifier: ^0.18.1
-    version: 0.18.1
+    specifier: ^0.18.3
+    version: 0.18.3
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
@@ -1705,8 +1705,8 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  /pocketbase@0.18.1:
-    resolution: {integrity: sha512-yx8BcKyenR5v+GeW4MyGz5fx2VIqAVY0WN+SU4ilyEhaW1MofXnxSDCTTC4XeOLD6XNUpHqcbUPNGrO8lHl3dA==}
+  /pocketbase@0.18.3:
+    resolution: {integrity: sha512-zE4+oue0p0Ntwoil17b2geBpPwV6B6bYdsbXmNWmod6XOqBK2+jLDT5/SlAP3une4bo3U5ZAW2GvigEBAV3bBg==}
     dev: false
 
   /pocketbase@0.9.1:
