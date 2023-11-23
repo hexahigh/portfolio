@@ -1,9 +1,9 @@
 <script>
 	import Footer from '../Footer.svelte';
 	import Nav from '../Nav.svelte';
-	export let name;
 
-    let fact = fetch("https://boofdev.eu/api/fact")
+	/** @type {import('./$types').PageData} */
+	export let data;
 </script>
 
 <svelte:head>
@@ -45,7 +45,7 @@
             <p class="text">I like archiving stuff to the <a class="colorurl" href="https://archive.org">Internet Archive</a></p>
             <p class="text">Im open for commisions and you can hire me to make something.</p>
             <br>
-            <p class="text">Random fact: {fact.text()}</p>
+            <p class="text">Random fact: {data.fact}</p>
             <br>
             <p class="colorurl"><a class="colorurl" href="../data/text/dsa-public-key.txt">DSA public-key</a></p>
             <p class="colorurl"><a class="colorurl" href="../data/text/rsa-public-key.txt">RSA public-key</a></p>
