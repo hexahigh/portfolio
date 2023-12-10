@@ -47,8 +47,7 @@
             <br>
             <p class="text">Random fact: {data.fact}</p>
             <br>
-            <p class="colorurl"><a class="colorurl" href="../data/text/dsa-public-key.txt">DSA public-key</a></p>
-            <p class="colorurl"><a class="colorurl" href="../data/text/rsa-public-key.txt">RSA public-key</a></p>
+            <p class="colorurl"><a class="colorurl" href="../data/text/publoc.key">Public key</a></p>
             <p class="text" style="text-align: right;">Last updated: 31/07/2023</p>
         </div>
         <!-- Donation popup -->
