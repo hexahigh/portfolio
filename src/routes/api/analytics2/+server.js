@@ -12,7 +12,7 @@ export async function GET({ request }) {
     let dnt = request.headers.get('Dnt')
     let sec_platform_version = request.headers.get('Sec-CH-UA-Platform-Version')
 
-    if(page.toLowerCase().indexOf("://boofdev.eu") == -1) {
+    if(page.toLowerCase().indexOf("://boofdev.eu") == -1 || page.toLowerCase().indexOf("://pomf.080609.xyz") == -1) {
         console.log("blocked")
         return new Response("418 (I'm a teapot)", { status: 418 })
     }
