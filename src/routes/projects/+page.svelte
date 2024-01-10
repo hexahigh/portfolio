@@ -55,17 +55,17 @@
             <br />
             <div class="projectscompact">
                 <h3>
-                    <a class="colorurl" href="https://boof.eu.org">Main site</a
+                    <a class="colorurl" href="https://pomf.080609.xyz">YAPC</a
                     >
                 </h3>
                 <h4 class="text" style="max-width: 30%;">
-                    This is basically just a place where i put random prototypes and other things i have made when i have been bored. It also contains a few games.
+                    A pomf clone im working on.
                 </h4>
             </div>
             <div class="projectscompact">
-                <h3><a class="colorurl" href="https://gitte.080609.xyz">Gitte</a></h3>   
+                <h3><a class="colorurl" href="https://github.com/hexahigh/boofutils">Boofutils</a></h3>   
                 <h4 class="text" style="max-width: 30%;">
-                    My selfhosted gitea instance. It is run on a raspberry pi 4 which at the moment has no cooling. So i cannot guarentee 100% uptime.
+                    A utility program im working on.
                 </h4>
             </div>
         </div>
