@@ -68,32 +68,32 @@
             <a href="#contact"><button id="index-intro-contact-btn">Contact</button></a>
         </div>
         <div class="index-socials">
-            <a href="mailto:admin@boofdev.eu"><img src="data/images/email-white.svg" alt="Email"></a>
-            <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github"></a>
-            <a href="https://www.youtube.com/@Boofydev"><img src="data/images/youtube.svg" alt="Youtube"></a>
+            <a href="mailto:admin@boofdev.eu"><img src="data/images/email-white.svg" alt="Email" class="tw-inline"></a>
+            <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github" class="tw-inline"></a>
+            <a href="https://www.youtube.com/@Boofydev"><img src="data/images/youtube.svg" alt="Youtube" class="tw-inline"></a>
         </div>
     </div>
     <div id="skills"></div>
     <div class="skills">
-        <h1 class="text">Skills:</h1>
+        <h1 class="text tw-text-3xl tw-font-semibold">Skills:</h1>
         <div class="skills-item">
-            <img src="data/images/html.png" alt="HTML">
+            <img src="data/images/html.png" alt="HTML" class="tw-inline">
             <p class="text">HTML</p>
         </div>
         <div class="skills-item">
-            <img src="data/images/css.png" alt="CSS">
+            <img src="data/images/css.png" alt="CSS" class="tw-inline">
             <p class="text">CSS</p>
         </div>
         <div class="skills-item">
-            <img src="data/images/js.png" alt="Javascript">
+            <img src="data/images/js.png" alt="Javascript" class="tw-inline">
             <p class="text">Javascript</p>
         </div>
         <div class="skills-item">
-            <img src="data/images/gopher.svg" alt="Golang">
+            <img src="data/images/gopher.svg" alt="Golang" class="tw-inline">
             <p class="text">Go</p>
         </div>
         <div class="skills-item">
-            <img src="data/images/Tux.svg" alt="Linux">
+            <img src="data/images/Tux.svg" alt="Linux" class="tw-inline">
             <p class="text">Linux</p>
         </div>
     </div>
@@ -119,9 +119,9 @@
             <br>
             <div class="contact-socials">
                 <p class="text">Socials</p>
-                <a href="mailto:admin@boofdev.eu"><img src="data/images/email-white.svg" alt="Email"></a>
-                <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github"></a>
-                <a href="https://www.youtube.com/@Boofydev"><img src="data/images/youtube.svg" alt="Youtube"></a>
+                <a href="mailto:admin@boofdev.eu"><img src="data/images/email-white.svg" alt="Email" class="tw-inline"></a>
+                <a href="https://github.com/hexahigh"><img src="data/images/github.svg" alt="Github" class="tw-inline"></a>
+                <a href="https://www.youtube.com/@Boofydev"><img src="data/images/youtube.svg" alt="Youtube" class="tw-inline"></a>
             </div>
         </div>
         <form id="formid" class="contact-form"
