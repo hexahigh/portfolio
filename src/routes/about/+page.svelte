@@ -47,7 +47,7 @@
             <br>
             <p class="text">Random fact: {data.fact}</p>
             <br>
-            <p class="colorurl"><a class="colorurl" href="../data/text/publoc.key">Public key</a></p>
+            <p class="colorurl"><a class="colorurl" href="/data/text/public.key">Public key</a></p>
             <p class="text" style="text-align: right;">Last updated: 31/07/2023</p>
         </div>
         <!-- Donation popup -->
